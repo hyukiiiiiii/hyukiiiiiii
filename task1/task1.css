@@ -1,0 +1,4 @@
+	object img {max-width: 100%}
+	* {margin: 0; padding: 0;}
+	html body .wrap {height: 100%; width: 90vw; height: 90vw; margin: 5%;}
+	.wrap div {width: 32%;height: 32%; margin: 1% 0% 0% 1%;border-radius: 5%; background-color: orange; float: left;}
