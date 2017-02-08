@@ -1,0 +1,90 @@
+
+	* {
+		margin: 0;padding: 0;
+		font-family: "Microsoft YaHei";
+	}
+
+	a {
+		text-decoration:none;
+		color: white;
+	}
+
+	body {
+		width: 100%;
+		max-width: 640px;
+		background-color: #eff0f4;
+	}
+
+	header {
+		width: 100%;
+		background-color: #5fc0cd;
+		position: relative;
+	}
+
+	.close,.sign_up {
+		font-size: 1.1em;
+		line-height: 3;
+		position: absolute;
+	}
+
+	.close {
+		left: 4%;
+	}
+
+	.sign_up {
+		right: 4%;
+	}
+
+	.sign_in {
+		font-size: 1.22em;
+		line-height: 2.6;
+		display: block;
+		width: 30%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.msg div {
+		width: 100%;
+		padding-top: 2%;
+	}
+
+	input{
+		border: none;
+		width: 80%;
+		padding-left: 20%;
+		font-size: 1.16em;
+		line-height: 3.2;
+		color: #e1e5e7;
+		background-repeat: no-repeat;
+		background-position: 0 50%;
+		-webkit-background-size: 16%;
+		background-size: 16%;
+	}
+
+	.phone_num {
+		background-image: url(./img/iphone.png);
+	}
+
+	.password {
+		background-image: url(./img/locked.png);
+	}
+
+	.btn {
+		width: 100%;
+		height: 40%;
+		font-size: 1.24em;
+		text-align: center;
+		background-color: #5fc0cd;
+		margin-top: 10%;
+		line-height: 3;
+	}
+
+	.fg_password {
+		display: block;
+		font-size: 1.2em;
+		line-height: 2.2;
+		text-align: right;
+		color: #5fc0cd;
+		padding-right: 4%;
+	}
