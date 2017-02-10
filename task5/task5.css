@@ -66,6 +66,9 @@
 			-webkit-background-size: cover;
 			background-size: cover;
 			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
 			display: flex;
 			align-items: center;
 		}
@@ -150,6 +153,10 @@
 		}
 
 		.intro {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
 			display: flex;
 			align-items: center;
 		}
