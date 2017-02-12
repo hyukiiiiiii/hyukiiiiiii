@@ -165,14 +165,14 @@
     }
 
     .price {
-      text-indent: .2rem;
+      text-indent: 0;
       font-size: .15rem;
       color: #e63b0e;
     }
 
     .price img {
-      width: .1rem;
-      margin-left: .05rem;
+      width: .08rem;
+      margin-left: .02rem;
     }
 
 /*footer wrap home & write & mine*/
