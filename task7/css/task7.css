@@ -261,6 +261,7 @@
 
     .vote-box-wrap {
       margin-top: .2rem;
+      margin-bottom: .9rem;
     }
 
     .vote-box {
@@ -355,6 +356,8 @@
 
   /*.count wrap the details of result*/ 
     .count {padding-right: 0;}
+
+    .g-result-details {margin-bottom: .73rem;}
 
     .g-result-details li {
       background-color: #fff;
