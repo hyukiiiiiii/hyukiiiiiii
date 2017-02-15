@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>首页</title>
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+  <script type="text/javascript" href="./css/bootstrap.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/task7.css">
+  <script type="text/javascript">
+    window.onload=function () {
+      var oBtn=document.getElementsByClassName('open-menu')[0];
+      var oBody=document.getElementsByTagName('body')[0];
+      var oMask=document.getElementsByClassName('g-mask')[0];
+      oBtn.onclick=function () {
+        oMask.style.display="block";
+        oBody.style.transform="translateX(2.44rem)";
+      }
+      oMask.onclick=function () {
+        oMask.style.display="none";
+        oBody.style.transform="translateX(0)";
+      }
+  }
+  </script>
+</head>
+<body class="gray-bg">
+<audio src="./mp3/东海and银赫-触(Can You Feel It).mp3" autoplay="autoplay" loop="loop"></audio>
+<!--头部-->
+<header><button class="open-menu"></button></header>
+<!--隐藏起的目录-->
+<nav>
+  <ul class="menu">
+    <li><img src="./img/broadcast.png">公告</li>
+    <li><img src="./img/mode.png">设置</li>
+    <li><img src="./img/help.png">帮助</li>
+    <li><img src="./img/about.png">关于</li>
+  </ul>
+</nav>
+<!--主体-->
+<main class="content-wrap">
+  <!--上次游戏-->
+  <div class="last-g" onclick="location.href='./EndingPage.html'">上次游戏：捉鬼猜词版</div>
+  <!--游戏列表-->
+  <div class="g-list">
+    <p class="g-name">捉鬼游戏</p>
+    <div class="g-simple">
+      <div class="g-triangle"></div>
+      <button type="button">简化版</button>
+      <p>有1133个用户正在玩此款游戏</p>
+    </div>
+    <div class="g-hard">
+      <div class="g-triangle g-tri-on"></div>
+      <button type="button" onclick="location.href='./GamePage.html'">猜词版</button>
+      <p>有1133个用户正在玩此款游戏</p>
+    </div>
+    <div class="g-easy">
+      <div class="g-triangle"></div>
+      <button type="button">白痴版</button>
+      <p>有1133个用户正在玩此款游戏</p>
+    </div>
+    <!--页点-->
+    <div class="page-dot">
+      <div id="page-dot-on"
+      ></div><div
+      ></div><div
+      ></div><div
+      ></div>
+    </div>
+  </div>
+</main>
+<!--菜单弹出时的遮罩-->
+<div class="g-mask"></div>
+</body>
+</html>
