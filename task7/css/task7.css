@@ -1,0 +1,430 @@
+/*common*/
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+    }
+
+    html {
+      font-size: 100px;
+    }
+
+    body {
+      overflow-x: hidden;
+      font-size: 16px;
+    }
+
+    ul,
+    li {
+      width: 100%;
+      list-style: none;
+    }
+
+    p {margin:0;}
+
+    .gray-bg {background-color: #f0f0f0;}
+
+    .blue-bg {background-color: #29bde0;}
+
+/*header*/
+  /*header lays on top of the screen*/
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: .52rem;
+      background-color: #29bde0;
+      border-bottom: .01rem solid #74d4eb;
+      z-index: 50;
+    }
+
+  /*header button*/
+
+    .open-menu,
+    .back-home,
+    .g-menu,
+    .close-g,
+    .imp {
+      position: fixed;
+      top: .22rem;
+      width: .24rem;
+      height: .24rem;
+      border: 1px solid transparent;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+
+    .open-menu,
+    .back-home,
+    .g-menu {left: 3.6%;}
+
+    .open-menu {background-image: url(../img/menu.png);}
+
+    .back-home {background-image: url(../img/backhome.png);}
+
+    .g-menu {background-image: url(../img/gamemenu.png);}
+
+    .close-g,
+    .imp {right: 3.6%;}
+
+    .close-g {background-image: url(../img/close.png);}
+
+    .imp {background-image: url(../img/imp.png);}
+
+  /*header title*/
+    header p {
+      margin-top: .24rem;
+      font-size: .19125rem;
+      text-align: center;
+      color: #fff;
+    }
+
+/*nav wrap the menu which hidden outside off*/
+    nav {
+      width: 2.44rem;
+      height: 0%;
+      transform: translateX(-2.44rem);
+    }
+
+    .menu li {
+      height: .44rem;
+      line-height: .44rem;
+      font-size: .16rem;
+      color: #29bde0;
+      background-color: #fff;
+      border-bottom: .01rem solid #f0f0f0;
+    }
+
+    .menu img {
+      display: inline-block;
+      margin: -.034rem .14rem 0 .088rem;
+      height: 60%;
+    }
+
+/*main*/
+    .content-wrap {width: 100%;}
+
+/*homepage*/
+  /*homepage main tag wrap last-game & game-list*/
+    .last-g,
+    .g-list {
+      margin-left: auto;
+      margin-right: auto;
+      width: 88.90625%;
+      background-color: #fff;
+      border: .005rem solid #c9c9c9;
+    }
+
+    .last-g {
+      margin-top: .67rem;
+      height: .65rem;
+      font-size: .196rem;
+      text-align: center;
+      line-height: .65rem;
+      color: #9a9a9a;
+      background-image: url(../img/back.png);
+      background-repeat: no-repeat;
+      background-position: 98% center;
+      -webkit-background-size: .14rem;
+      background-size: .14rem;
+    }
+
+  /*.g-list wrap.g-name & 3 buttons & page-dots*/
+    .g-list {
+      margin-top: .15rem;
+    }
+
+    .g-name {
+      line-height: .51rem;
+      text-align: center;
+      width: 100%;
+      font-size: .2123rem;
+      color: #fbb435;
+      border-bottom: 1px solid #fdd793;
+    }
+
+    .g-simple,
+    .g-hard,
+    .g-easy {
+      position: relative;
+      margin-top: .17rem;}
+
+  /*.g-list buttons*/
+    .g-list button {
+      display: block;
+      margin: 0 auto;
+      width: 81.370826%;
+      height: .75rem;
+      font-size: .18rem;
+      color: #fff;
+      background-color: #69d1e9;
+      border: none;
+    }
+
+    .g-list div p {
+      margin-top: .12rem;
+      text-align: center;
+      font-size: .138rem;
+      color: #787878;
+    }
+
+  /*.g-triangle shows when a g-list button is clicked*/ 
+    .g-triangle {
+      display: none;
+      position: absolute;
+      top: .25rem;
+      right: .06rem;
+      width: 0;
+      height: 0;
+      border-left: .141182rem solid #fbb435;
+      border-top: .1553rem solid transparent;
+      border-bottom: .1553rem solid transparent;
+    }
+
+    .g-tri-on {display: block;}
+
+  /*.page-dot wrap*/
+    .page-dot {
+      margin: 0 auto;
+      width: .64rem;
+    }
+
+    .page-dot div {
+      display: inline-block;
+      margin: 0 .03rem;
+      width: .1rem;
+      height: .1rem;
+      border-radius: .05rem;
+      background-color: #f0f0f0;
+    }
+
+    #page-dot-on {
+      background-color: #69d1e9;
+    }
+
+  /*homepage mask shows when menu is open*/
+    .g-mask {
+      display: none;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: .58;
+      filter: alpha(opacity=58%);
+      z-index: 100;
+    }
+
+/*gamepage*/
+  /*.bubble-wrap wrap a series of bubble and p*/
+    .bubble-bar {
+      margin-top: .52rem;
+      height: .46125rem;
+      background-color: #b9e9f5;
+      background-image: url(../img/votestart.png);
+      background-repeat: no-repeat;
+      background-position: 96% center;
+      -webkit-background-size: contain;
+       background-size: contain;
+    }
+
+    .bubble-point {
+      margin-left: .36rem;
+      width: 0;
+      height: 0;
+      border-left: .04rem solid transparent;
+      border-right: .04rem solid transparent;
+      border-top: .0866rem solid #b9e9f5;
+    }
+
+    .bubble-bar p {
+      text-indent: .28rem;
+      font-size: .14625rem;
+      line-height: .46125rem;
+    }
+
+    .v-inst {
+      text-indent: .36rem;
+      font-size: .135rem;
+      color: #fff;
+    }
+
+  /*.vote-box-wrap wrap all the vote-boxs including roles and number and onclick img*/
+
+    .vote-box-wrap {
+      margin-top: .2rem;
+    }
+
+    .vote-box {
+      display: inline-block;
+      margin: 0 5.416667%;
+      width: .765rem;
+    }
+
+    .v-box {
+      width: .765rem;
+      height: .765rem;
+      text-align: center;
+      border: .03rem solid #fff;
+    }
+
+    .role {
+      font-size: .16875rem;
+      line-height: .54rem;
+      background-color: #f5c97b;
+    }
+
+    .num {
+      font-size: .12805rem;
+      line-height: .165rem;
+      color: #fff;
+      background-color: #83b09a;
+    }
+
+    .vote-img {
+      width: 100%;
+      height: .44rem;
+    }
+
+    .vote-img img {
+      display: none;
+      padding: .126rem 0 .126rem 0;
+      width: 100%;
+    }
+
+
+  /*.kill-btn-wrap lays below the screen*/
+    .kill-btn-wrap {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: .9rem;
+      text-align: center;
+      background-color: #29bde0;
+    }
+
+    .kill-btn {
+      margin-top: .18rem;
+      width: 77.8%;
+      height: .5rem;
+      font-size: .225rem;
+      background-color: #fbb435;
+      color: #fff;
+      border: .01rem solid transparent;
+    }
+
+/*endingpage*/
+
+  /*.winner wrap the big win image*/
+    .winner {
+      margin: .62rem auto .1rem auto;
+      width: 2rem;
+    }
+
+    .winner img {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .good-job {
+      margin: 0 auto .26rem auto;
+      width: 74.444444%;
+      font-size: .18565rem;
+      line-height: .23rem;
+      font-weight: bold;
+      color: #ffc865;
+    }
+
+  /*result wrap a grid*/
+
+    .result {
+      width: 74.444444%;
+      margin-bottom: .15rem;
+      padding: 0;
+      font-size: .14625rem;
+      color: #fff;
+    }
+
+  /*.count wrap the details of result*/ 
+    .count {padding-right: 0;}
+
+    .g-result-details li {
+      background-color: #fff;
+      border-bottom: .01rem solid #e1e1e1;
+    }
+
+    .g-result-details p {
+      padding: .08rem 0 .1rem 0;
+      text-align: justify;
+      font-size: .14625rem;
+      line-height: .22rem;
+      color: #a6a6a6;
+    }
+
+    .g-1-day,
+    .g-2-day,
+    .g-3-day {
+      width: 74.444444%;
+      padding: 0;
+    }
+    .g-d {
+      font-size: .16875rem;
+      font-weight: bold;
+      line-height: .3rem;
+      color: #515151;
+    }
+
+    .g-t {
+      font-size: .1125rem;
+      line-height: .3rem;
+      color: #c7c7c7;
+    }
+
+  /*.foot-btn-bg lays under .foot-btn-wrap*/
+    .foot-btn-bg {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: .73rem;
+      background-color: #29bde0;
+      opacity: .52;
+      filter: alpha(opacity=52%);
+    }
+
+    .foot-btn-wrap {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: .73rem;
+    }
+
+    .new-g,
+    .g-share {
+      position: fixed;
+      bottom: .14rem;
+      width: 42.343056%;
+      height: .48375rem;
+      border-radius: .05625rem;
+      font-size: .225rem;
+      color: #fff;
+      border: .01rem solid transparent;
+    }
+
+    .new-g {
+      left: .12rem;
+      background-color: #f66f6f;
+    }
+
+    .g-share {
+      right: .12rem;
+      background-color: #fbb435;
+    }
+
