@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>结果页</title>
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+  <script type="text/javascript" href="./css/bootstrap.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/task7.css">
+</head>
+<body class="blue-bg">
+<!--头部-->
+<header>
+  <button class="back-home" onclick="location.href='./HomePage.html'" 
+  ></button><p>游戏结果</p><button class="imp"
+  ></button>
+  </header>
+<!--主体-->
+<main>
+  <!--游戏胜利图片及说明-->
+  <div class="winner"><img src="./img/winB.png"></div>
+  <p class="good-job">太棒了!你知道么？在捉鬼游戏中只有20%的卧底取得游戏最终的胜利哦！</p>
+  <!--游戏结果统计-->
+  <div class="result container">
+    <p>本次游戏共计用时0小时25分钟</p>
+    <div class="row">
+      <div class="count col-xs-4">杀&nbsp;&nbsp;&nbsp;&nbsp;手0人</div>
+      <div class="count col-xs-4">警&nbsp;&nbsp;&nbsp;&nbsp;察1人</div>
+      <div class="count col-xs-4">平&nbsp;&nbsp;&nbsp;&nbsp;民6人</div>
+    </div>
+    <div class="row">
+      <div class="count col-xs-4">狙击手0人</div>
+      <div class="count col-xs-4">医&nbsp;&nbsp;&nbsp;&nbsp;生1人</div>
+    </div>
+    <p>卧底词汇：爱新觉罗</p>
+    <p>水民词汇：努尔哈赤</p>
+  </div>
+  <!--游戏结果详细信息-->
+  <ul class="g-result-details">
+    <li>
+      <div class="g-1-day container">
+        <div class="row">
+          <div class="g-d col-xs-8">第1天</div>
+          <div class="g-t col-xs-4">0小时07分</div>
+        </div>
+        <p>晚上：5号被杀手杀死，5号是水民<br
+        >白天：8号被全民投票投死，8号是杀手</p>
+      </div>
+    </li>
+    <li>
+      <div class="g-2-day container">
+        <div class="row">
+          <div class="g-d col-xs-8">第2天</div>
+          <div class="g-t col-xs-4">0小时07分</div>
+        </div>
+        <p>晚上：5号被杀手杀死，5号是水民<br
+        >白天：8号被全民投票投死，8号是杀手</p>
+      </div>
+    <li>
+      <div class="g-3-day container">
+        <div class="row">
+          <div class="g-d col-xs-8">第3天</div>
+          <div class="g-t col-xs-4">0小时07分</div>
+        </div>
+        <p>晚上：5号被杀手杀死，5号是水民<br
+        >白天：8号被全民投票投死，8号是杀手</p>
+      </div>
+    </li>
+    </li>
+  </ul>
+  <!--底端分享按钮遮罩-->
+  <div class="foot-btn-bg"></div>
+  <div class="foot-btn-wrap">
+    <button type="button" class="new-g" onclick="location.href='./GamePage.html'">再来一局</button>
+    <button type="button" class="g-share">上传并分享</button>
+  </div>
+</main>
+</body>
+</html>
