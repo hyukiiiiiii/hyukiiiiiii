@@ -1,0 +1,299 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p {font-family: "Microsoft YaHei";margin: 0;}
+
+h5 {font-weight: bold;}
+
+.head-wrap .container-fluid,
+.nav-wrap .container-fluid,
+.it-intro-wrap .container-fluid,
+.it-study-wrap .container-fluid,
+.it-student-wrap .container-fluid,
+.it-company-wrap .container-fluid,
+.it-link-wrap .container-fluid,
+.it-about-wrap .container-fluid {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.tel {
+	font-size: 14px;
+	line-height: 34px;
+	color: #29b078;
+}
+
+.icon button {
+	width: 42px;
+	height: 34px;
+	border: 1px solid transparent;
+	background-color: transparent;
+	background-image: url(../img/shape.png);
+	background-repeat: no-repeat;
+}
+
+.wechat {background-position: -5px -6px;}
+
+.qq {background-position: -47px -6px;}
+
+.weibo {background-position: -89px -6px;}
+
+.nav-wrap {
+	height: 90px;
+	background-color: #29b078;
+}
+
+.nav-wrap a {
+	padding: 35px 30px 32px 30px;
+	font-size: 16.02px;
+	line-height: 90px;
+	color: #fff;
+}
+
+.nav-wrap a:hover {
+	text-decoration: none;
+	border-bottom: 4px solid #fff;
+}
+
+main {background-color: #fafafa;}
+
+.carousel-control {width: 20%;}
+
+.it-intro-wrap {margin-top: 120px}
+
+.it-intro,
+.it-intro-student {height: 200px;}
+
+.it-intro p {
+	margin: 0 auto;
+	width: 180px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #999;
+}
+
+.it-intro h5 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.it-intro-img {
+	margin: 12px auto;
+	width: 50px;
+	height: 50px;
+}
+
+.it-intro-img img {
+	display: block;
+	margin: auto;
+}
+
+.it-intro-student {border-left:2px dashed #dedede;}
+
+.it-intro-student div {
+	margin: 50px auto auto auto;
+	width: 150px;
+	height: 100px;
+}
+
+.it-intro-student h5 {
+	text-align: left;
+	text-indent: 24px;
+	color: #29b078;
+	background: url(../img/shape.png) no-repeat -176px -17px;
+}
+
+.it-intro-student p {color: #999;}
+
+.it-study-wrap h5 {
+	text-align: center;
+	margin: 80px auto 40px auto;
+}
+
+.study-box {height: 100px;}
+
+.study-num {
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #29b078;
+	background-color: #fff;
+	box-shadow: 0 1px 1px 1px #d8d8d8;
+}
+
+.study-p {
+	float: left;
+	margin-left: 12px;
+	width: 130px;
+	height: 50px;
+	font-size: 12px;
+	color: #999;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+}
+
+.arrow {
+	margin: 16px auto auto 220px;
+	width: 20px;
+	height: 20px;
+	background: url(../img/shape.png) no-repeat -146px -17px;
+}
+
+.it-student-wrap h5 {
+	margin: 50px auto 50px auto;
+	text-align: center;
+}
+
+.student-box {
+	/*padding-left: 25px;
+	padding-right: 25px;*/
+}
+
+.student-bg {
+	padding: 20px 24px 20px 24px;
+	height: 320px;
+	background-color: #fff;
+	box-shadow: 0 1px 4px 2px #f4f4f4;
+}
+
+.student-img {
+	margin: 0 auto;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.student-img img {
+	width: 100%;
+}
+
+.student-bg h5 {margin: 26px auto 20px auto;}
+
+.student-bg p {
+	font-size: 12px;
+	line-height: 20px;
+	color: #999;
+}
+
+.dot-wrap {
+	margin: 16px 0;
+	text-align: center;}
+
+.dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0 0 1px 1px #eee;
+}
+
+.dot-on {background-color: #29b078;}
+
+.it-company-wrap h5 {
+	margin: 60px auto 50px auto;
+	text-align: center;
+}
+
+.company-box {
+	box-shadow: 0 0 3px 1px #f4f4f4;
+	margin-bottom: 80px;
+}
+
+.company-img {
+	display: inline-block;
+	width: 20%;
+}
+
+.company-img:hover {
+	position: relative;
+	z-index: 10;
+	box-shadow: 0 0 8px 3px #eee;
+}
+
+.company-img img {
+	width: 100%;
+}
+
+.it-link-wrap {
+	margin: 20px auto 14px auto;
+}
+
+.it-link-wrap h5 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.link-box div {
+	display: inline-block;
+	margin-right: 2%;
+	list-style-type : disc;
+	width: 8%;
+	font-size: 12px;
+	color: #999;
+}
+
+.it-about-wrap {
+	font-size: 12px;
+	color: #fff;
+	background-color: #29b078;
+}
+
+.about h6,
+.website h6 {margin: 30px 0 30px 0;}
+
+.about div {margin: 30px 0 30px 0;}
+
+.about1,
+.about2,
+.about3 {
+	display: inline-block;
+	padding: 0  6px 0 6px;
+	border-left: 1px solid #fff;
+}
+
+.about1 {
+	padding-left:0;
+	border-left: 1px solid transparent;
+}
+
+.website p {
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+}
+
+.platform h6 {
+	margin: 30px 50px auto auto;
+
+}
+
+.platform div {
+	width: 70px;
+	float: right;
+	margin: 10px 50px auto auto;
+}
+
+.platform img {width: 100%;}
+
+.copyright {
+	padding: 4px 0 4px 0;
+	-ms-text-align-last: center;
+	text-align-last: center;
+	font-size: 12px;
+	color: #fff;
+	background-color: #29b078;
+}
