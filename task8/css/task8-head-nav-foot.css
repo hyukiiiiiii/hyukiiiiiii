@@ -1,0 +1,139 @@
+/*header & footer 头部和底部css文件*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p {font-family: "Microsoft YaHei";margin: 0;}
+
+@media (min-width:1200px) {
+	.container-fluid {
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+@media (max-width:991px) {
+	.container-fluid {
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+/*head*/
+.tel {
+	font-size: 14px;
+	line-height: 34px;
+	color: #29b078;
+}
+
+.icon button {
+	width: 42px;
+	height: 34px;
+	border: 1px solid transparent;
+	background-color: transparent;
+	background-image: url(../img/shape.png);
+	background-repeat: no-repeat;
+}
+
+.wechat {background-position: -5px -6px;}
+
+.qq {background-position: -47px -6px;}
+
+.weibo {background-position: -89px -6px;}
+
+
+/*navigation*/
+.nav-wrap {
+	height: 90px;
+	background-color: #29b078;
+}
+
+.logo {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	height: 90px;
+}
+
+.logo img {display: block;}
+
+.nav-wrap a {
+	padding: 35px 30px 32px 30px;
+	font-size: 16.02px;
+	line-height: 90px;
+	color: #fff;
+}
+
+.nav-wrap a:hover {
+	text-decoration: none;
+	border-bottom: 4px solid #fff;
+}
+
+
+/*foot*/
+
+/*it-about关于网站*/
+.it-about-wrap {
+	font-size: 12px;
+	color: #fff;
+	background-color: #29b078;
+}
+
+.about h6,
+.website h6 {margin: 30px 0 30px 0;}
+
+.about div {margin: 30px 0 30px 0;}
+
+.about1,
+.about2,
+.about3 {
+	display: inline-block;
+	padding: 0  6px 0 6px;
+	border-left: 1px solid #fff;
+}
+
+.about1 {
+	padding-left:0;
+	border-left: 1px solid transparent;
+}
+
+.website p {
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+}
+
+.platform h6 {
+	margin: 30px 50px auto auto;
+
+}
+
+.platform div {
+	width: 70px;
+	float: right;
+	margin: 10px 50px auto auto;
+}
+
+.platform img {width: 100%;}
+
+
+
+.copyright {
+	padding: 4px 0 4px 0;
+	-ms-text-align-last: center;
+	text-align-last: center;
+	background-color: #29b078;
+}
+
+.copyright p {
+	width: 125%;
+	font-size: 12px;
+	-webkit-transform-origin-x: 0;
+	-webkit-transform: scale(0.80);
+	color: #fff;
+}
