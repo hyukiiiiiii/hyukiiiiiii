@@ -7,19 +7,20 @@
 
 p {font-family: "Microsoft YaHei";margin: 0;}
 
+.bold {font-weight: bold;}
+
+main {background-color: #fafafa;}
+
 @media (min-width:1200px) {
 	.container-fluid {
 		margin: 0 auto;
 		width: 80%;
 	}
-}
-
-@media (max-width:991px) {
-	.container-fluid {
-		margin: 0 auto;
-		width: 80%;
+	.icon button {
+		display: inline-block!important;
 	}
 }
+
 
 /*head*/
 .tel {
@@ -50,17 +51,10 @@ p {font-family: "Microsoft YaHei";margin: 0;}
 	background-color: #29b078;
 }
 
-.logo {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	align-items: center;
-	height: 90px;
+.logo img {
+	display: block;
+	padding-top: 20px;
 }
-
-.logo img {display: block;}
 
 .nav-wrap a {
 	padding: 35px 30px 32px 30px;
@@ -74,6 +68,13 @@ p {font-family: "Microsoft YaHei";margin: 0;}
 	border-bottom: 4px solid #fff;
 }
 
+.nav-btn .btn {
+	margin-top: 25px;
+	margin-bottom: auto;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+}
 
 /*foot*/
 
@@ -109,14 +110,14 @@ p {font-family: "Microsoft YaHei";margin: 0;}
 }
 
 .platform h6 {
-	margin: 30px 50px auto auto;
+	margin: 30px 10px auto auto;
 
 }
 
 .platform div {
 	width: 70px;
 	float: right;
-	margin: 10px 50px auto auto;
+	margin: 10px 10px auto auto;
 }
 
 .platform img {width: 100%;}
@@ -131,9 +132,7 @@ p {font-family: "Microsoft YaHei";margin: 0;}
 }
 
 .copyright p {
-	width: 125%;
+	text-align: center;
 	font-size: 12px;
-	-webkit-transform-origin-x: 0;
-	-webkit-transform: scale(0.80);
 	color: #fff;
 }
