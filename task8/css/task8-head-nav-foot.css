@@ -22,7 +22,7 @@ main {background-color: #fafafa;}
 }
 
 
-/*head*/
+/*head头部*/
 .tel {
 	font-size: 14px;
 	line-height: 34px;
@@ -45,7 +45,7 @@ main {background-color: #fafafa;}
 .weibo {background-position: -89px -6px;}
 
 
-/*navigation*/
+/*navigation通用导航条*/
 .nav-wrap {
 	height: 90px;
 	background-color: #29b078;
