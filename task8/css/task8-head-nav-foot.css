@@ -74,7 +74,12 @@ main {background-color: #fafafa;}
 	width: 44px;
 	height: 44px;
 	border: 1px solid transparent;
-	background: transparent url(../img/menu.png) 0 0 no-repeat;
+	background: transparent url(../img/menu.png) 0 0 no-repeat!important;
+}
+
+.nav-btn .dropdown-menu {
+	left: auto;
+	right: 0;
 }
 
 /*foot*/
