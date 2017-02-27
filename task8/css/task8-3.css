@@ -56,6 +56,7 @@
 
 .co-on {color: #fe6711!important;}
 
+.it-co-group a:hover > .co-dot,
 .co-on .co-dot {background-color: #fe6711;}
 
 /*合作企业详细介绍*/
