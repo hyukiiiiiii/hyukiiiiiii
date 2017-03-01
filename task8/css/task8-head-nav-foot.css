@@ -7,6 +7,8 @@
 
 p {font-family: "Microsoft YaHei";margin: 0;}
 
+ul,li {list-style: none;}
+
 .bold {font-weight: bold;}
 
 main {background-color: #fafafa;}
@@ -46,40 +48,54 @@ main {background-color: #fafafa;}
 
 
 /*navigation通用导航条*/
-.nav-wrap {
-	height: 90px;
-	background-color: #29b078;
-}
+.nav-wrap {background-color: #29b078;}
 
 .logo img {
 	display: block;
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
-.nav-wrap a {
+.nav-bar {
 	padding: 35px 30px 32px 30px;
 	font-size: 16.02px;
 	line-height: 90px;
 	color: #fff;
 }
 
-.nav-wrap a:hover {
+.nav-bar:hover {
+	color: #fff;
 	text-decoration: none;
 	border-bottom: 4px solid #fff;
 }
 
-.nav-btn .btn {
-	margin-top: 30px;
-	margin-bottom: auto;
+.nav-btn {
+	float: right;
+	margin-top: 16px;
+	margin-bottom: 16px;
 	width: 44px;
 	height: 44px;
 	border: 1px solid transparent;
 	background: transparent url(../img/menu.png) 0 0 no-repeat!important;
 }
 
-.nav-btn .dropdown-menu {
-	left: auto;
-	right: 0;
+.nav-list {
+	margin-top: 76px;
+	border-top: 1px solid #aaa;
+}
+
+.nav-list a {
+	display: block;
+	line-height: 30px;
+	color: #fff;
+	text-align: center;
+	background-color: #29b078;
+	border-bottom: 1px solid #29b078;
+}
+
+.nav-list a:hover {
+	text-decoration: none;
+	color: #fff;
+	border-bottom: 1px solid #fff;
 }
 
 /*foot*/

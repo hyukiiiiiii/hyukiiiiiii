@@ -56,7 +56,13 @@
 	margin: 80px auto 40px auto;
 }
 
-.study-box {height: 100px;}
+.study-box-wrap {height: 100px;}
+
+.study-box {
+	width: 240px;
+	height: 50px;
+	margin: 0 auto;
+}
 
 .study-num {
 	float: left;
@@ -89,10 +95,10 @@
 }
 
 .arrow {
-	margin: 16px auto auto 220px;
+	margin-left: 220px;
 	width: 20px;
-	height: 20px;
-	background: url(../img/shape.png) no-repeat -146px -17px;
+	height: 50px;
+	background: url(../img/shape.png) no-repeat -146px -1px;
 }
 
 
