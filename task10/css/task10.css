@@ -1,0 +1,400 @@
+/*通用样式*/
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	html,
+	body {font-family: "STHeiti", sans-serif;}
+
+	input,
+	button {font-family: "STHeiti", sans-serif;}
+
+	body {background-color: #f9f9f9;}
+
+	main {background-color: #fff;}
+
+	@media (max-width: 767px) {
+
+		.padding-content {padding: 0 12px;}
+		/*手机页面内容边距12px*/
+		.login-content>p {display: none!important;}	
+		/*手机页面导航去掉客服电话*/
+		.nav-content button {
+			margin: 10px 0!important;
+			padding: 4px 6px!important;
+		}/*手机页面导航按钮缩小*/
+	}
+
+	@media (min-width: 768px) {
+		.padding-content {padding: 0 20px;}
+		/*平板页面内容边距20px*/
+		form>div>div {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}/*平板及以上页面表单改为flex布局，但平板页面表单仍单列显示*/
+		.see-details {margin-right: 10px;}/*表单按钮位置从下方改为靠右*/
+	}
+
+	@media (min-width: 992px) {
+		.co-ifrm {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+		}/*中屏及以上页面底部从单列显示改为flex布局*/
+		form label {display: inline-block!important;}/*中屏及以上页面表单单行显示*/
+	}
+
+	@media (min-width: 1200px) {
+		.padding-content {
+			margin: 0 auto;
+			width: 1170px;
+		}/*1200px以上分辨率页面内容宽度1170px*/
+	}
+
+/*****************************************************************/
+
+/*login navigatin*/
+	.login-wrap {
+		height: 40px;
+		background-color: #1d7ad9;
+	}
+
+	.login-content p {
+		display: inline-block;
+		line-height: 40px;
+		font-size: 14px;
+		color: #fff;
+	}/*客服电话*/
+
+	.login-content button {
+		float: right;
+		width: 60px;
+		height: 40px;
+		font-size: 16px;
+		color: #fff;
+		background-color: transparent;
+		border: 1px solid transparent;
+		border-left-color: #fff;
+		border-right-color: #fff;
+	}/*login按钮样式*/
+
+	.login-content .btn:hover,
+	.login-content .btn-on {
+		color: #000;
+		background-color: #fff;
+		border: 1px solid #fff;
+		border-left-color: #1d7ad9;
+		border-right-color: #1d7ad9;	
+	}/*login按钮hover变色*/
+
+	.login-content .btn-on {
+		width: 90px;
+		border: 1px solid #fff;
+	}/*login按钮激活样式*/
+
+
+/*service navigatin*/
+	.nav-wrap {text-align: right;}
+
+	.nav-content button {
+		margin: 30px 0 30px 40px;
+		padding: 12px 16px;
+		font-size: 16px;
+		color: #000;
+		background-color: #fff;
+		border: 1px solid #fff;
+		border-radius: 4px;
+		box-shadow: 2px 2px 0 0 #eee;
+	}/*nav按钮样式*/
+
+	.nav-content .btn-on {
+		color: #fff;
+		background-color: #1d7ad9;
+		border: 1px solid #1d7ad9;
+		box-shadow: none;
+	}/*nav按钮激活样式*/
+
+
+/*production-line*/
+	.production-line {
+		padding-top: 50px;
+		text-align: right;
+	}/*包裹*/
+
+	.production-line>div {
+		display: inline-block;
+		width: 150px;
+		margin-right: -3px;
+	}/*块*/
+
+	.step strong {
+		display: inline-block;
+		float: left;
+		width: 150px;
+		height: 6px;
+		margin-left: -3px;
+		border-radius: 3px;
+		background-color: #ccc;
+	}/*线*/
+
+	.step em {
+		float: left;
+		width: 24px;
+		height: 24px;
+		margin-left: 63px;
+		margin-top: -15px;
+		border-radius: 50%;
+		background-color: #ccc;
+	}/*圆*/
+
+	.step span {
+		position: relative;
+		z-index: 3;
+		float: left;
+		margin-top: -10px;
+		margin-left: -16px;
+		font-size: 12px;
+		color: #fff;
+	}/*编号*/
+
+	.step p {
+		float: left;
+		margin-left: 30px;
+		font-size: 18px;
+		line-height: 60px;
+		color: #ccc;
+	}/*文字*/
+
+	.step-on p {color: #ff7f02;}/*激活文字样式*/
+
+	.step:hover strong,
+	.step:hover em,
+	.step-on strong,
+	.step-on em {
+		position: relative;
+		z-index: 2;
+		background-color: #ff7f02;
+	}/*hover+激活样式*/
+
+
+/*procedure*/
+	.procedure {
+		font-size: 18px;
+		padding-top: 30px;
+		padding-bottom: 60px;
+	}
+
+	.procedure-title {height: 50px;}
+
+	.procedure-title>i {
+		float: left;
+		margin: 2px 8px auto 0;
+		width: 4px;
+		height: 24px;
+		font-size: 20px;
+		border-radius: 2px;
+		background-color: #1d7ad9;
+	}/*procedure标题前的竖杠*/
+
+
+/*表单样式*/
+	form p i {
+		float: left;
+		width: 30px;
+		height: 30px;
+		margin: 10px 8px;
+		background: no-repeat url(../img/shape.png);
+	}/*表单标题的小图标*/
+
+	.choose-size>p i {background-position: -30px;}/*表单标题2的小图标*/
+
+	.choose-material>p i {background-position: -60px;}/*表单标题3的小图标*/
+
+	form>div {
+		border: 1px solid #f1f1f1;
+		background-color: #fbfcff;
+	}
+
+	form>div>p {
+		line-height: 50px;
+		background-color: #f1f1f1;
+		color: #1d7ad9;
+		box-shadow: 0 -10px 10px 12px #ececec inset;
+	}/*表单标题样式*/
+
+	form>div>div {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}/*label包裹上级块样式*/
+
+	.label-wrap {
+		display: inline-block;
+		width: 84%;
+	}/*label包裹块样式*/
+
+	.choose-material>div {min-height: 160px;}/*第3行单独高度样式*/
+
+	form label {
+		display: block;
+		padding-left: 30px;
+		padding-right: 20px;
+		line-height: 60px;
+		color: #777;
+	}/*label样式*/
+
+	form label i {
+		display: inline-block;
+		position: relative;
+		top: 2px;
+		width: 16px;
+		height: 16px;
+		margin-right: 16px;
+		border-radius: 50%;
+		border: 1px solid #ddd;
+	}/*radio飞选中样式*/
+
+	form label input[type="radio"] {
+		width: 1px;
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}/*radio原始样式清除*/
+
+	form label input[type="text"] {
+		margin: 0 4px;
+		width: 66px;
+		height: 24px;
+		border: 1px solid #eee;
+	}/*input text样式修改*/
+
+	form label input:checked+i {
+		width: 4px;
+		height: 4px;
+		border: 7px solid #1d7ad9;
+	}/*radio选中样式*/
+
+
+/*查看详情按钮样式*/
+	.see-details {
+		display: block;
+		width: 120px;
+		margin: 30px;
+		background-color: #fff;
+		border: 1px solid #eee;
+	}
+
+	.see-details span {
+		float: left;
+		display: inline-block;
+		padding: 0 10px;
+		font-size: 14px;
+		line-height: 36px;
+		color: #a1a1a1;
+	}/*查看详情按钮文字样式*/
+
+	.see-details strong {
+		float: right;
+		display: inline-block;
+		width: 22px;
+		height: 26px;
+		margin-top: 5px;
+		margin-right: 2px;
+		border-radius: 2px;
+		background-color: #1d7ad9;
+	}/*查看详情小方块按钮样式*/
+
+	.see-details em {
+		position: absolute;
+		display: inline-block;
+		width: 0;
+		height: 0;
+		margin-top: 10px;
+		margin-left: -6px;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-top: 6px solid #fff;
+	}/*查看详情小方块内三角形样式*/
+
+
+/*next-step表单提交按钮*/
+	.next-step {
+		height: 300px;
+		background-color: #fff;
+	}
+
+	.next-step input {
+		float: left;
+		margin-top: 140px;
+		margin-left: calc(50% - 84px);
+		width: 168px;
+		height: 44px;
+		font-size: 20px;
+		border-radius: 4px;
+		border: 1px solid #e34f4f;
+		color: #fff;
+		background-color: #e34f4f;
+	}/*表单提交按钮样式*/
+
+/*foot企业底部信息*/
+	.company-ifrm {height: 300px;}
+
+	.co-ifrm {
+		padding-top: 60px;
+		color: #aaa;
+	}
+
+	.co-slogan {
+		float: left;
+		width: 300px;
+		padding-bottom: 20px;
+	}/*企业口号*/
+
+	.co-link {
+		float: left;
+		width: 300px;
+		padding: 0;
+	}/*企业链接*/
+
+	.co-link a {
+		display: inline-block;
+		padding-right: 26px;
+		padding-bottom: 20px;
+		font-size: 14px;
+		color: #aaa;
+		text-decoration: none;
+	}/*企业链接内部样式*/
+
+	.co-link .link-on {color: #1d7ad9;}/*企业链接激活样式*/
+
+	.contact {
+		float: left;
+		width: 160px;
+	}/*企业联系方式*/
+
+	.contact p {
+		padding-bottom: 16px;
+		font-size: 14px;
+	}/*企业联系方式内部样式*/
+
+	.wechat-img {
+		float: left;
+	}/*微信二维码*/
+
+	/*版权信息*/
+	.copyright-ifrm {
+		line-height: 30px;
+		font-size: 12px;
+		color: #fff;
+		background-color: #1d7ad9;
+		text-align: center;
+	}
+
+	.copyright-ifrm span {padding: 0 8px;}
