@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>首页</title>
+  <link rel="stylesheet" type="text/css" href="./css/task13.css">
+  <script type="text/javascript">
+
+  window.onload = function () {
+    var oBody = document.getElementsByTagName('body')[0];
+    var oBtn = document.getElementsByClassName('homepage-menu')[0];
+    var oNav = document.getElementsByTagName('nav')[0];
+    var oMain = document.getElementsByTagName('main')[0];
+    var oMask = document.getElementsByClassName('g-mask')[0];
+      
+    oBtn.onclick = function () {
+      oBody.style.overflow="hidden";
+      oNav.style.transform="translateX(0)";
+      oMain.style.transform="translateX(240px)";
+      oMask.style.display="block";
+      oMask.style.transform="translateX(240px)";
+    }
+
+    oMask.onclick = function () {
+      oBody.style.overflow="scroll";
+      oNav.style.transform="translateX(-240px)";
+      oMain.style.transform="translateX(0)";
+      oMask.style.transform="translateX(0)";
+      oMask.style.display="none";
+    }
+  }
+  </script>
+</head>
+<body class="homepage-bg">
+
+<header><button type="button" class="homepage-menu" href=""></button></header><!--头部-->
+
+<nav>
+  <ul class="menu">
+    <li><i class="broadcast"></i>公告</li>
+    <li><i class="mode"></i>设置</li>
+    <li><i class="help"></i>帮助</li>
+    <li><i class="about"></i>关于</li>
+  </ul>
+</nav><!--隐藏起的目录-->
+
+<main>
+  <div class="last-g"><a href="./task13-3.html"><span>上次游戏：捉鬼猜词版</span><i class="point-to-last-g"></i></a></div><!--上次游戏-->
+  
+  <div class="g-list">
+    <p class="g-title">捉鬼游戏</p>
+    <div class="new-g">
+      <a href="./task13-2.html">简化版</a>
+      <div class="point-to-new-g"></div>
+      <p>有1133个用户正在玩此款游戏</p>
+    </div>
+    <div class="new-g">
+      <a href="./task13-2.html">猜词版</a>
+      <div class="point-to-new-g"></div>
+      <p>有1133个用户正在玩此款游戏</p>
+    </div>
+    <div class="new-g">
+      <a href="./task13-2.html">白痴版</a>
+      <div class="point-to-new-g"></div>
+      <p>有1133个用户正在玩此款游戏</p>
+    </div>
+    <span class="page-dot-wrap"><i class="page-dot-on"></i><i></i><i></i><i></i></i></span><!--页点-->
+  </div><!--游戏列表-->
+</div>
+</main>
+<div class="g-mask"></div><!--菜单弹出时的遮罩-->
+
+</body>
+</html>
