@@ -115,8 +115,10 @@
 .reset();
 
 body {
+  .w(100%);
   .bg-c(@blue);/*global*/
-  overflow-x: hidden;}
+  overflow-x: hidden;
+}
 .homepage-bg {.bg-black(94);/*global*/}
 /**********task13-1************/
 header {
@@ -333,7 +335,7 @@ main {/*layout*/
   
   .target {
     padding: 3px;
-    .mb(35px);
+    .mb(50px);
     .bg-c(white);
   }
   .role {
@@ -354,11 +356,11 @@ main {/*layout*/
   .vote {
     .pos(a);
     .dp(n);
+    .mt(-40px);
     .w(100%);
-    .h(15px);
-    .mt(-25px);
+    .h(30px);
     .bg-url(@vote,contain);
-    .bg-pos(center,0);
+    .bg-pos(center,center);
   }
   .target:hover + .vote {
     .dp(ib);
