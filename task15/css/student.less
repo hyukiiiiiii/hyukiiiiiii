@@ -1,0 +1,48 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/***********base*****************/
+
+.it-student h5 {
+	margin: 50px auto;
+	.ta(c);
+}
+
+.student-bg {
+	.w(240px);
+	.h(300px);
+	padding: 20px 24px;
+	margin: 10px auto;
+	.bg-c(@white);
+	box-shadow: 0 1px 4px 2px #f4f4f4;
+	h5 {margin: 26px auto 20px auto;}
+	p {
+		.fz(12px);
+		.lh(20px);
+		.black(60);
+	}
+}
+
+.student-img {
+	.w(80px);
+	.h(80px);
+	.basic-c;
+	.border-r(50%);
+	overflow: hidden;
+	img {
+		.w(100%);
+	}
+}
+
+.dot-wrap {
+	margin: 16px 0;
+	.ta(c);
+	i {
+		.dp(ib);
+		margin: 0 4px;
+		.round(10px,@white);
+		box-shadow: 0 0 1px 1px #eee;
+		&.dot-on {
+			.round(10px,@green);
+		}
+	}
+}

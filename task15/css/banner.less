@@ -1,0 +1,37 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/***********base*****************/
+
+  .slide-frame {
+    .w(100%);
+    overflow: hidden;
+  }
+  .slide {.w(400%);}
+  .item{
+    .fl(l);
+    .w(25%);}
+    .item img{.w(100%);}
+  .slide{
+    animation: ma 20s ease-out infinite alternate;
+    -webkit-animation: ma 20s ease-out infinite alternate;
+  }
+  
+  @keyframes ma {
+      0%,25% {.ml(0px);}
+      30%,50% {.ml(-100%);}
+      55%,75% {.ml(-200%);}
+      80%,100% {.ml(-300%);}
+  }
+
+  @-webkit-keyframes ma {
+      0%,25% {.ml(0px);}
+      30%,50% {.ml(-100%);}
+      55%,75% {.ml(-200%);}
+      80%,100% {.ml(-300%);}
+  }
+
+/****************task15-3************************/
+.slim-banner {
+  .w(100%);
+  img {.w(100%);}
+}
