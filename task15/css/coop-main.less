@@ -1,0 +1,49 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/***********base*****************/
+
+/*合作企业详细介绍*/
+.coop-intro,
+.coop-content {
+	.fz(12px);
+	.lh(28px);
+	.black(60);
+}
+
+.coop-intro{
+	.pl(50px);
+	.pr(50px);
+	.img-wrap {
+		.dp(ib);
+		.w(100%);
+	}
+	img {
+		.w(100%);
+		.max-w(135px);
+	}
+	p {
+		.dp(ib);
+		.fl(r);
+		.pt(20px);
+		.pb(20px);
+	}
+}
+
+.coop-content {
+	.mb(220px);
+	padding: 20px 50px 160px 50px;
+	p {
+		.pt(16px);
+		.pb(16px);
+		.ti(24px);
+	}
+}
+@media (min-width:992px) {
+	.coop-intro {
+		.img-wrap{.w(20%);}
+		p {
+			.w(76%);
+			.pl(18px);
+		}
+	}
+}

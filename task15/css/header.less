@@ -1,0 +1,36 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/***********base*****************/
+
+header {
+  .h(34px);
+  .tel {
+    .dp(n);
+    .fl(l);
+    .fz(14px);
+    .lh(34px);
+    .color(@green);
+  }
+  .icon {
+    .fl(r);
+    .lh(0);
+  }
+  .icon a {
+    .dp(ib);
+    .w(34px);
+    .h(34px);
+    .bg-url(@icon);
+    &.wechat {.bg-pos(0,0);}
+    &.qq {.bg-pos(-45px,0);}
+    &.weibo {.bg-pos(-90px,0);}
+  }
+
+}
+
+@media (min-width:768px) {
+  header {
+    .tel {.dp(ib);}
+    .icon a {.w(42px);}
+  }
+}
+

@@ -1,0 +1,35 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/***********base*****************/
+
+/*合作企业列表*/
+.coop-title {
+	.lh(50px);
+	.fw(b);
+	.ta(c);
+}
+
+.coop-side-group {
+	.pt(30px);
+	.pb(30px);
+	.fz(12px);
+	a {
+		.dp(b);
+		.lh(50px);
+		.color(@green);
+		text-decoration: none;
+	}
+}
+
+.coop-dot {
+	.dp(ib);
+	.round(8px,transparent);
+	margin: auto 2% auto 32%;
+	.border(1px,@orange);
+}
+
+.coop-on {.color(@orange)!important;}
+
+.coop-side-group a:hover > .coop-dot,
+.coop-on .coop-dot {.bg-c(@orange);}
+

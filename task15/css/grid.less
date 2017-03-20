@@ -1,0 +1,40 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/***********base*****************/
+
+.wrap {
+  .dp(b);
+  padding: 0 10px;
+  &:before,
+  &:after {
+    content: " ";
+    .dp(b);
+    .h(0);
+    visibility: hidden;
+    clear: both;
+  }
+ *zoom: 1;
+}
+
+.cell,
+.cell3 {
+  .pos(r);
+  .fl(l);
+  .w(100%);
+}
+
+@media (min-width:1200px) {
+  .wrap {
+    .basic-c;
+    .w(1170px);
+  }
+  .cell {
+    .dp(ib);
+    .w(25%);
+  }
+  .cell3 {
+    .dp(ib);
+    .w(33.33333%);
+  }
+}
+
