@@ -1,0 +1,140 @@
+
+/*task8-2职位列表*/
+
+.profession-nav {
+	padding: 20px 0;
+	border-bottom: 2px solid #eff0f1;
+}
+
+.profession-nav a {
+	text-decoration: none;
+	color: #000;
+}
+
+.profession-nav span {color: #29b078;}
+
+.profession-list {
+	padding: 15px 0 15px 0;
+	font-size: 12px;
+	border-bottom: 1px solid #eff0f1;
+}
+
+.profession-list span {color: #999;}
+
+.profession-list > .btn {
+	margin-left: 20px;
+	padding: 0 3px;
+	background-color: transparent;
+	border: 1px solid transparent;
+}
+
+.profession-list > .btn.active {
+	color: #fff;
+	background-color: #29b078;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.pro-list h5 {
+	padding: 20px 0;
+	line-height: 1.42857143;
+	border-bottom: 2px solid #eff0f1;
+}
+
+.pro-list .row {}
+
+.pro-box {
+	margin-top: 30px;
+	overflow: hidden;
+}
+
+.pro-mask {
+	display: none;
+	position: absolute;
+	top: 0;
+	width: calc(100% - 30px);
+	height: 500px;
+	border-radius: 1%;
+	padding: 50px 40px;
+	text-align: justify;
+	color: #fff;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.pro-mask .bold {
+	text-align: center;
+	line-height: 60px;
+}
+
+table:hover + .pro-mask,
+.pro-mask:hover {
+	display: block;
+}
+
+table {
+	box-shadow: 0 0 0 1px #ddd;
+	border-radius: 1%;
+	overflow: hidden;
+	border-collapse: collapse;
+	background-color: #fff;
+}
+
+table,th,td {
+	padding: 10px 10px;
+	font-size: 12px;
+	color: #999;
+	border: 1px solid #ddd;
+}
+
+table span {
+	color: #f01400;
+}
+
+table p {
+	display: inline-block;
+	color: #000;
+}
+
+table .pro-head img {
+	float: left;
+	height: 100px;
+}
+
+table .pro-head p {
+	float: left;
+	margin-left: 2%;
+	word-wrap: break-word;
+}
+
+table .pro-head strong {
+	line-height: 30px;
+}
+
+table .pro-name {
+	width: 60%;
+	word-break: break-all;
+}
+
+table .pro-demand img {
+	display: inline-block;
+	padding-left: 12px;
+}
+
+/*table .pro-demand span {
+	display: inline-block;
+	text-indent: 10px;
+}*/
+
+table .pro-price-list {
+	text-align: center;
+}
+
+table .pro-price p {
+	text-indent: 10px;
+}
+
+table .pro-tip p {
+	width: 100%;
+	text-overflow: ellipsis;
+	color: #999;
+}

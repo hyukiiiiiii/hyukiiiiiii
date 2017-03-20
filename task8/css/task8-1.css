@@ -1,0 +1,204 @@
+/*bs轮播*/
+.carousel-control {width: 20%;}
+
+
+/*it-intro介绍*/
+.it-intro-wrap {margin-top: 120px}
+
+.it-intro,
+.it-intro-student {height: 200px;}
+
+.it-intro p {
+	margin: 0 auto;
+	width: 180px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #999;
+}
+
+.it-intro h5 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.it-intro-img {
+	margin: 12px auto;
+	width: 50px;
+	height: 50px;
+}
+
+.it-intro-img img {
+	display: block;
+	margin: auto;
+}
+
+.it-intro-student {border-left:2px dashed #dedede;}
+
+.it-intro-student div {
+	margin: 50px auto auto auto;
+	width: 150px;
+	height: 100px;
+}
+
+.it-intro-student h5 {
+	text-align: left;
+	text-indent: 24px;
+	color: #29b078;
+	background: url(../img/shape.png) no-repeat -176px -17px;
+}
+
+.it-intro-student p {color: #999;}
+
+
+/*it-study如何学习*/
+.it-study-wrap h5 {
+	text-align: center;
+	margin: 80px auto 40px auto;
+}
+
+.study-box-wrap {height: 100px;}
+
+.study-box {
+	width: 240px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.study-num {
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #29b078;
+	background-color: #fff;
+	box-shadow: 0 1px 1px 1px #d8d8d8;
+}
+
+.study-p {
+	float: left;
+	margin-left: 12px;
+	width: 130px;
+	height: 50px;
+	font-size: 12px;
+	color: #999;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+}
+
+.arrow {
+	margin-left: 220px;
+	width: 20px;
+	height: 50px;
+	background: url(../img/shape.png) no-repeat -146px -1px;
+}
+
+
+
+/*it-student优秀学员展示*/
+.it-student-wrap h5 {
+	margin: 50px auto 50px auto;
+	text-align: center;
+}
+
+.student-bg {
+	padding: 20px 24px 20px 24px;
+	height: 320px;
+	background-color: #fff;
+	box-shadow: 0 1px 4px 2px #f4f4f4;
+}
+
+.student-img {
+	margin: 0 auto;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.student-img img {
+	width: 100%;
+}
+
+.student-bg h5 {margin: 26px auto 20px auto;}
+
+.student-bg p {
+	font-size: 12px;
+	line-height: 20px;
+	color: #999;
+}
+
+.dot-wrap {
+	margin: 16px 0;
+	text-align: center;}
+
+.dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0 0 1px 1px #eee;
+}
+
+.dot-on {background-color: #29b078;}
+
+
+
+/*it-company战略合作企业*/
+.it-company-wrap h5 {
+	margin: 60px auto 50px auto;
+	text-align: center;
+}
+
+.company-box {
+	box-shadow: 0 0 3px 1px #f4f4f4;
+	margin-bottom: 80px;
+}
+
+.company-img {
+	display: inline-block;
+	width: 20%;
+}
+
+.company-img:hover {
+	position: relative;
+	z-index: 10;
+	box-shadow: 0 0 8px 3px #eee;
+}
+
+.company-img img {
+	width: 100%;
+}
+
+
+
+/*it-link友情链接*/
+.it-link-wrap {
+	padding-top: 20px;
+	padding-bottom: 14px;
+	background-color: #fff;
+}
+
+.it-link-wrap h5 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.link-box div {
+	display: inline-block;
+	margin-right: 2%;
+	list-style-type : disc;
+	width: 70px;
+	font-size: 12px;
+	color: #999;
+}
+

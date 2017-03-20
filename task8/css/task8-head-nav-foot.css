@@ -1,0 +1,160 @@
+/*header & footer 头部和底部css文件*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p {font-family: "Microsoft YaHei";margin: 0;}
+
+ul,li {list-style: none;}
+
+.bold {font-weight: bold;}
+
+main {background-color: #fafafa;}
+
+@media (min-width:1200px) {
+	.container-fluid {
+		margin: 0 auto;
+		width: 80%;
+	}
+	.icon button {
+		display: inline-block!important;
+	}
+}
+
+
+/*head头部*/
+.tel {
+	font-size: 14px;
+	line-height: 34px;
+	color: #29b078;
+}
+
+.icon button {
+	width: 42px;
+	height: 34px;
+	border: 1px solid transparent;
+	background-color: transparent;
+	background-image: url(../img/shape.png);
+	background-repeat: no-repeat;
+}
+
+.wechat {background-position: -5px -6px;}
+
+.qq {background-position: -47px -6px;}
+
+.weibo {background-position: -89px -6px;}
+
+
+/*navigation通用导航条*/
+.nav-wrap {background-color: #29b078;}
+
+.logo img {
+	display: block;
+	padding-top: 10px;
+}
+
+.nav-bar {
+	padding: 35px 30px 32px 30px;
+	font-size: 16.02px;
+	line-height: 90px;
+	color: #fff;
+}
+
+.nav-bar:hover {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 4px solid #fff;
+}
+
+.nav-btn {
+	float: right;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	width: 44px;
+	height: 44px;
+	border: 1px solid transparent;
+	background: transparent url(../img/menu.png) 0 0 no-repeat!important;
+}
+
+.nav-list {
+	margin-top: 76px;
+	border-top: 1px solid #aaa;
+}
+
+.nav-list a {
+	display: block;
+	line-height: 30px;
+	color: #fff;
+	text-align: center;
+	background-color: #29b078;
+	border-bottom: 1px solid #29b078;
+}
+
+.nav-list a:hover {
+	text-decoration: none;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+/*foot*/
+
+/*it-about关于网站*/
+.it-about-wrap {
+	font-size: 12px;
+	color: #fff;
+	background-color: #29b078;
+}
+
+.about h6,
+.website h6 {margin: 30px 0 30px 0;}
+
+.about div {margin: 30px 0 30px 0;}
+
+.about1,
+.about2,
+.about3 {
+	display: inline-block;
+	padding: 0  6px 0 6px;
+	border-left: 1px solid #fff;
+}
+
+.about1 {
+	padding-left:0;
+	border-left: 1px solid transparent;
+}
+
+.website p {
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+}
+
+.platform h6 {
+	margin: 30px 10px auto auto;
+
+}
+
+.platform div {
+	width: 70px;
+	float: right;
+	margin: 10px 10px auto auto;
+}
+
+.platform img {width: 100%;}
+
+
+
+.copyright {
+	padding: 4px 0 4px 0;
+	-ms-text-align-last: center;
+	text-align-last: center;
+	background-color: #29b078;
+}
+
+.copyright p {
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+}
