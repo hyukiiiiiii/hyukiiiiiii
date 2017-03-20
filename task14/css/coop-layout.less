@@ -1,0 +1,31 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/***********base*****************/
+
+/*合作企业box*/
+.coop-sidebar {
+	.dp(ib);
+	.fl(l);
+	.w(100%);
+}
+.coop-main {
+	.dp(ib);
+	.fl(l);
+	.w(100%);
+}
+@media (min-width:992px) {
+	.coop-sidebar {
+		.w(22%)
+	}
+	.coop-main {
+		.w(74%);
+		.ml(4%);
+	}
+	
+}
+
+.coop-box {
+	.bg-c(@white);
+	.border(1px,@black93);
+	box-shadow: 0 0 1px 1px @black93;
+}
