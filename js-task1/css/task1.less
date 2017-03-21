@@ -1,0 +1,29 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/***********base*****************/
+.reset();
+
+.wrap {
+	.w(94vw);
+	.h(94vw);
+	margin: 3vw;
+}
+.wrap div {
+	.fl(l);
+	.w(30%);
+	.h(30%);
+	margin: 3% 0% 0% 3%;
+	.border-r(10%);
+	.bg-c(@orange);
+}
+
+button {
+	.dp(b);
+	.btn(94vw,40px,16px,@orange,@white,1px,@orange,5px);
+	.basic-c;
+	.mb(20px);
+	outline: none;
+	&:hover{
+		.btn(94vw,40px,16px,@white,@orange,1px,@orange,5px);
+	}
+}
