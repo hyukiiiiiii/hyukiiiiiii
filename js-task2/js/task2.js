@@ -48,18 +48,9 @@ $(function(){
       $(".civilian-num span").text("");
     }
   })
-  /*$("input.num").blur(function(){
+  $("input.num").blur(function(){
     $("main").css("background-color","#fff");
-    if(re.test($("input.num").val()))
-    {
-      $(".killer-num span").text(roleMatch($("input.num").val()));
-      $(".civilian-num span").text($("input.num").val()-roleMatch($("input.num").val()));
-    }else
-    {
-      $(".killer-num span").text("");
-      $(".civilian-num span").text("");
-    }
-  })*/
+  })
   $(".role-match-btn").click(function(){
     if(!re.test($("input.num").val()))
     {
