@@ -1,0 +1,137 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/**********base************/
+body {
+  .bg-c(@blue);
+}
+
+.instruct-box {
+  .bubble-instruct {
+    .pos(r);
+    .h(40px);
+    .pl(7%);
+    .lh(40px);
+    .bg-c(@light-blue);
+    .buble-tri {
+      .pos(a);
+      .dp(b);
+      .top(40px);
+      .left(12%);
+      .tri(10px,@light-blue,0,transparent,5px,transparent,5px,transparent);
+    }
+  }
+  
+  .instruct {
+    .h(30px);
+    .mt(10px);
+    .pl(12%);
+    .fz(12px);
+    .lh(30px);
+    .color(white);
+  }
+}
+
+.role-box-wrap {
+  .mt(14px);
+  .mb(100px);
+  .role-box {
+    .pos(r);
+    .w(33.3%);
+    .dp(ib);/*layout*/
+    .ta(c);
+
+    .box {
+      .w(80px);
+      .basic-c;
+      padding: 3px;
+      .bg-c(white);
+    }
+
+    .role {
+      .h(66px);/*model*/
+      .fz(20px);
+      .ta(c);
+      .lh(66px);
+      .bg-c(@bg-green)/*style*/
+    }
+
+    .num {
+      .h(14px);/*model*/
+      .fz(12px);
+      .ta(c);
+      .lh(14px);
+      .color(white);
+      .bg-c(@bg-green);/*style*/
+    }
+
+    .target {
+      .dp(ib);
+      .w(40px);
+      .h(40px);
+      .mt(7px);
+      .bg-url(@img,480px 450px);
+      .bg-pos(-7px,-114px);
+      opacity: 0;
+      filter: alpha(opacity=0);
+    }
+    .opacity {
+      opacity: 1;
+      filter: alpha(opacity=100);
+    }
+  }
+  
+  .live {
+    .role {.bg-c(@vote-box-orange);}
+  }
+}
+
+.btn-block {
+  .pos(f);
+  .bottom(0);
+  .w(100%);
+  .h(100px);
+  .bg-c(@blue);
+  .game-start-btn,
+  .kill-btn {
+    .dp(b);
+    .mt(20px);
+    .basic-c;
+    .btn(84%,50px,28px,@white,@com-orange,1px,@com-orange,0);
+  }
+}
+
+
+.pop-wrap {
+  .bg-mask {
+    .pos(a);
+    .top(0);
+    .w(100%);
+    .h(100%);
+    .bg-c(@black);
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index: 10;
+  }
+  .pop-up {
+    .pos(a);
+    .top(160px);
+    .left(50%);
+    .ml(-140px);
+    .box(280px,180px,24px,@black,@white,10px);
+    z-index: 20;
+    overflow: hidden;
+    p {
+      .mt(40px);
+      padding: 0 30px;
+      .h(80px);
+      .color(#355978);
+      .fw(b);
+    }
+    button {
+      .btn(50%,60px,20px,#a6b8c5,@white,1px,#ebf2fc,0);
+    }
+    .cancel-btn {
+      border-right: 1px #fff;
+    }
+  }
+}

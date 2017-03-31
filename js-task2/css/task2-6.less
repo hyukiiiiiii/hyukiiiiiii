@@ -1,0 +1,74 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/**********base************/
+
+body {
+  .bg-c(@blue);
+}
+.win-img {
+  .dp(b);
+  .basic-c;
+  .w(200px);
+  .h(130px);
+  .bg-url(@img,320px 300px);
+  .bg-pos(-120px,-162px);
+}
+
+.result {
+  padding: 0 10%;
+  .mb(14px);
+  
+  li {
+    .fz(15px);
+    .color(white);
+    p {
+      .dp(ib);
+      .w(30%);
+    }
+  }
+}
+
+.result-details {
+  .bg-c(white);
+  .mb(80px);
+  li {
+    padding: 0 10% 12px 10%;
+    .border-bottom(1px,@black87);
+    h5 {
+      .dp(ib);
+      .fz(15px);
+      .lh(30px);
+      .black(32);
+    }
+    span {
+      .fl(r);
+      .fz(10px);
+      .lh(30px);
+      .black(78);
+    }
+    p {
+      .fz(13px);
+      .lh(20px);
+      .black(65);
+    }
+  }
+}
+
+.foot-btn-wrap {
+  .pos(f);
+  .bottom(0);
+  .w(100%);
+  .h(55px);
+  .pt(15px);
+  .bg-c(@blue48);
+  .new-g {
+    .fl(l);
+    .ml(4%);
+    .btn(42%,42px,20px,white,@com-orange,1px,@com-orange,5px);
+  }
+  .g-share {
+    .fl(r);
+    .mr(4%);
+    .btn(42%,42px,20px,white,@num-red,1px,@num-red,5px);
+  }
+}

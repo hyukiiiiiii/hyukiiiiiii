@@ -1,0 +1,139 @@
+.reset() {
+  *{margin:0; padding:0;}
+ /* *{-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;}*/
+  html,body,input{font-family: "Microsoft YaHei", sans-serif;}
+  ul,ol{list-style:none;}
+  img{border:none;}
+  input,select,textarea{outline:none; border:none; background:none;}
+  textarea{resize:none;}
+  a{text-decoration:none;}
+}
+//reset
+
+.pos(r) {position: relative;}
+.pos(a) {position: absolute;}
+.pos(f) {position: fixed;}
+.top(@px:100px) {top: @px;}
+.bottom(@px:100px) {bottom: @px;}
+.left(@px:100px) {left: @px;}
+.right(@px:100px) {right: @px;}
+.dp(b) {display: block;}
+.dp(i) {display: inline;}
+.dp(ib) {display: inline-block;}
+.dp(f) {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.dp(n) {display: none;}
+.fl(l) {float: left;}
+.fl(r) {float: right;}
+//position,top,right,z-index,display,float
+
+.w(@px:100px) {width: @px;}
+.min-w(@px:100px) {min-width:@px;}
+.max-w(@px:720px) {max-width: @px;}
+.h(@px:100px) {height: @px;}
+//width,height
+
+.basic-c() {margin-left: auto; margin-right: auto;}
+.mt(@px:100px) {margin-top: @px;}
+.mb(@px:100px) {margin-bottom: @px;}
+.ml(@px:100px) {margin-left: @px;}
+.mr(@px:100px) {margin-right: @px;}
+.pd(@y:0,@x:0) {padding:@y @x;}
+.pt(@px) {padding-top: @px;}
+.pb(@px) {padding-bottom: @px;}
+.pl(@px) {padding-left: @px;}
+.pr(@px) {padding-right: @px;}
+//margin,padding
+//
+.fz(@px:16px) {font-size: @px;}
+.lh(@px:100px) {line-height: @px;}
+.lspace(@px:100px) {letter-spacing: @px;}
+.ta(c) {text-align: center;}
+.ta(r) {text-align: right;}
+.ta(l) {text-align: left;}
+.fw(b) {font-weight: bold;}
+.fw(n) {font-weight: normal;}
+.ti(@px) {text-indent: @px;}
+//font,line-height,letter-spacing,color,text-align
+
+
+.white() {color: #fff;}
+.black(@x:0) {color: lighten(black,@x);}
+.bg-black(@x:100%) {background-color: lighten(black,@x);}
+.bg-c(@color) {background-color: @color;}
+.color(@color) {color: @color;}
+//color
+
+.bg-url(@url,@size:cover) {
+  background: transparent url(@url) no-repeat;
+  background-size: @size;
+}
+.bg-pos(@x:0,@y:0) {background-position: @x @y;}
+.border-top(@px:1px,@color) {border-top: @px solid @color;}
+.border-bottom(@px:1px,@color) {border-bottom: @px solid @color;}
+.border-left(@px:1px,@color) {border-left: @px solid @color;}
+.border-right(@px:1px,@color) {border-right: @px solid @color;}
+.border(@px:1px,@color) {border: @px solid @color;};
+.border-r(@px:1px) {border-radius: @px;}
+//border,background
+
+.btn(@w,@h,@fz,@color,@bg-c,@b,@b-c,@r) {
+  .w(@w);
+  .h(@h);
+  .fz(@fz);
+  .color(@color;);
+  .bg-c(@bg-c);
+  .border(@b,@b-c);
+  .border-r(@r);
+}//button
+
+.box(@w,@h,@fz,@color,@bg-c,@r) {
+  .w(@w);
+  .h(@h);
+  .fz(@fz);
+  .color(@color;);
+  .bg-c(@bg-c);
+  .border-r(@r);
+  }//radius-box
+
+.tri(@t,@t-c:transparent,@b,@b-c:transparent,@l,@l-c:transparent,@r,@r-c:transparent) {
+  .border-top(@t,@t-c);
+  .border-bottom(@b,@b-c);
+  .border-left(@l,@l-c);
+  .border-right(@r,@r-c);
+}
+//trigangle
+
+.round(@px,@color) {
+  .w(@px);
+  .h(@px);
+  .border-r(50%);
+  .bg-c(@color);
+}
+//round
+
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    .dp(b);
+    .h(0);
+    visibility: hidden;
+    clear: both;
+  }
+}
+
+.clearxi() {
+  *zoom: 1;
+}
+//清浮动
+
+/**********************************************************************************/

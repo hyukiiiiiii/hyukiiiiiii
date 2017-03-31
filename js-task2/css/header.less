@@ -1,0 +1,48 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/**********base************/
+
+.reset();
+
+header {
+  .bg-c(@blue);/*global*/
+  .pos(f);
+  .top(0);/*layout*/
+  .w(100%);
+  .h(40px);/*model*/
+  .ta(c);
+  z-index:5;/*style*/
+
+  span {
+    .fz(17px);
+    .lh(40px);
+    .color(white);/*style*/
+  }
+  a,
+  button {
+    .pos(a);
+    .dp(ib);/*layout*/
+    .w(30px);
+    .h(30px);
+    .mt(4px);/*model*/
+    .bg-url(@img,320px 300px);/*style*/
+  }
+  .menu-icon,
+  .back-icon,
+  .home-icon {.left(4%);/*layout*/}
+  .close-icon,
+  .instruct-icon {.right(4%);/*layout*/}
+  .menu-icon {
+    .border(1px,transparent);
+    .bg-c(transparent);
+    .bg-pos(-30px,0);
+  }
+  .back-icon {.bg-pos(-60px,0);}
+  .close-icon {.bg-pos(-87px,0);}
+  .home-icon {.bg-pos(-116px,0);}
+  .instruct-icon {.bg-pos(-145px,0);}
+}
+
+.header-block {
+  .h(40px);
+}
