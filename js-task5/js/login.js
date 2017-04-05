@@ -1,16 +1,17 @@
 
 
 $(document).ready(function() {
-	$("#login").on("click",function(){
+	$("#log-btn").on("click",function(){
         $(".caution").text("");
+        inputTest();
         jsLogin();
     });
 });
 
 
 function jqLogin() {
-    var lname = $("#loginname").val();
-    var lpwd = $("#loginpwd").val();
+    var lname = $("#log-name").val();
+    var lpwd = $("#log-pwd").val();
     console.log(lname);
     console.log(lpwd);
     $.ajax({
@@ -52,8 +53,8 @@ function jqLogin() {
 }
 
 function jsLogin() {
-    var loginName = document.getElementById('loginname').value;
-    var loginPwd = document.getElementById('loginpwd').value;
+    var loginName = document.getElementById('log-name').value;
+    var loginPwd = document.getElementById('log-pwd').value;
     console.log(loginName);
     console.log(loginPwd);
     var loginhttp;
@@ -81,4 +82,13 @@ function jsLogin() {
     loginhttp.open("POST","/carrots-admin-ajax/a/login/",true);
     loginhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded;charset=utf-8");
     loginhttp.send("name="+loginName+"&pwd="+loginPwd);
+}
+
+function inputTest() {
+    if ($("#log-pwd").val()=="") {
+        $(".caution").text("请输入密码");
+    }
+    if ($("#log-name").val()=="") {
+        $(".caution").text("请输入用户名");
+    }
 }
