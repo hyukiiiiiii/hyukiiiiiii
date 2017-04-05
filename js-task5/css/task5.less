@@ -1,0 +1,67 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/*******************************/
+.reset();
+html,body {.h(100%);}
+body {
+	.bg-url(@bg);
+}
+main {
+	.mt(0);
+	overflow: hidden;
+}
+.login-box {
+	.w(320px);
+	.h(250px);
+	.mt(100px);
+	.basic-c;
+	.bg-c(@black87);
+	
+	h4 {
+		.fz(20px);
+		.fw(b);
+		.ta(c);
+		.lh(60px);
+		.color(@blue);
+	}
+	label {
+		.dp(b);
+		.w(280px);
+		.h(40px);
+		.mb(12px);
+		.basic-c;
+		.bg-c(@white);
+		i {
+			.fl(l);
+			.w(40px);
+			.h(40px);
+			.bg-url(@icon);
+		}
+		input {
+			.dp(ib);
+			.w(240px);
+			.h(40px);
+			.fz(12px);
+			.ti(10px);
+		}
+	}
+	.identity {
+		i {.bg-pos(0,0);}
+	}
+	.password {
+		i {.bg-pos(-40px,0);}
+	}
+	.caution {
+		.h(30px);
+		.mt(10px);
+		.pl(70px);
+		.color(red);
+		.fz(14px);
+		.lh(30px);
+	}
+	button {
+		.dp(b);
+		.basic-c;
+		.btn(280px,40px,16px,@white,@blue,1px,@blue,4px);
+	}
+}
