@@ -33,9 +33,11 @@ main {
 		.bg-c(@white);
 		i {
 			.fl(l);
-			.w(40px);
-			.h(40px);
-			.bg-url(@icon);
+			.mt(10px);
+			.w(39px);
+			.h(20px);
+			.bg-url(@icon,80px);
+			border-right: 1px solid @black87; 
 		}
 		input {
 			.dp(ib);
@@ -46,10 +48,10 @@ main {
 		}
 	}
 	.identity {
-		i {.bg-pos(0,0);}
+		i {.bg-pos(-1px,-4px);}
 	}
 	.password {
-		i {.bg-pos(-40px,0);}
+		i {.bg-pos(-41px,-4px);}
 	}
 	.caution {
 		.h(30px);
