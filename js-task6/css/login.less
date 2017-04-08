@@ -1,0 +1,69 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/*******************************/
+.reset();
+html,body {.h(100%);}
+body {
+	.bg-url(@bg);
+}
+main {
+	.mt(0);
+	overflow: hidden;
+}
+.login-box {
+	.w(320px);
+	.h(250px);
+	.mt(100px);
+	.basic-c;
+	.bg-c(@black87);
+	
+	.site-title {
+		.fz(20px);
+		.fw(b);
+		.ta(c);
+		.lh(60px);
+		.color(@blue);
+	}
+	.login-label {
+		.dp(b);
+		.w(280px);
+		.h(40px);
+		.mb(12px);
+		.basic-c;
+		.bg-c(@white);
+		i {
+			.fl(l);
+			.mt(10px);
+			.w(39px);
+			.h(20px);
+			.bg-url(@icon,80px);
+			border-right: 1px solid @black87; 
+		}
+		input {
+			.dp(ib);
+			.w(240px);
+			.h(40px);
+			.fz(12px);
+			.ti(10px);
+		}
+	}
+	.name-label i {
+		.bg-pos(-1px,-4px);
+	}
+	.pwd-label i {
+		.bg-pos(-41px,-4px);
+	}
+	.caution {
+		.h(30px);
+		.mt(10px);
+		.pl(70px);
+		.color(red);
+		.fz(14px);
+		.lh(30px);
+	}
+	.login-btn {
+		.dp(b);
+		.basic-c;
+		.btn(280px,40px,16px,@white,@blue,1px,@blue,4px);
+	}
+}
