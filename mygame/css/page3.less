@@ -1,0 +1,60 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/**********base************/
+body {
+  .bg-c(@blue);
+}
+.role-check-box {
+  .pos(r);
+  .mt(30px);
+  .basic-c;
+  .w(70%);
+  .h(360px);
+  .border(4px,@white);
+  .bg-c(@card-orange);
+  .player-num {
+    .pos(a);
+    .top(-20px);
+    .left(50%);
+    .ml(-20px);
+    .round(40px,@white);
+    .fz(20px);
+    .ta(c);
+    .lh(40px);
+    .color(@num-red);
+  }
+  .role-card {
+    .back-side {
+      .dp(b);
+      .mt(100px);
+      .basic-c;
+      .round(170px,transparent);
+      .bg-url(@img,352px 330px);
+      .bg-pos(-178px,-8px);
+    }
+    .front-side {
+      .dp(b);
+      .mt(40px);
+      .basic-c;
+      .round(120px,transparent);
+      .bg-url(@img,320px 300px);
+      .bg-pos(-4px,-168px);
+    }
+  }
+  .role {
+    .dp(b);
+    .mt(20px);
+    .fz(20px);
+    .ta(c);
+    .color(@blue);
+  }
+}
+.role-check-btn,
+.hide-and-pass-btn,
+.judge-check-btn {
+  .pos(f);
+  .left(8%);
+  .bottom(20px);
+  .dp(b);
+  .btn(84%,40px,24px,@white,@com-orange,1px,@com-orange,0);
+}

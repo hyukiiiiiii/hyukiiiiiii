@@ -1,0 +1,98 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/**********base************/
+
+body {.bg-black(94);/*global*/}
+
+.day-list{
+  .mt(16px);
+  .day {
+    .basic-c;
+    .mb(8px);
+    .box(96%,44px,18px,@blue,@white,0);
+    .border(1px,@black70);
+    .lh(44px);
+    .ta(c);
+  }
+}
+
+.event-list {
+  .basic-c;
+  .mb(84px);
+  .w(96%);
+  padding: 32px 0 16px 0;
+  .border(1px,@black70);
+  .bg-c(@white);
+  .event {
+    .pos(r);
+    .ml(24%);
+    .mb(16px);
+    .box(70%,36px,16px,@white,@blue,0);
+    .lh(36px);
+    .ta(c);
+    i {
+      .pos(a);
+      .top(10px);
+      .left(-16px);
+      .dp(ib);
+      .tri(8px,transparent,8px,transparent,0,transparent,16px,@blue);
+    }
+  }
+  .disable-event {
+    .bg-c(@bg-green);
+    i {
+      .tri(8px,transparent,8px,transparent,0,transparent,16px,@bg-green);
+    }
+  }
+  p {
+    .ml(24%);
+    .mb(16px);
+    .fz(14px);
+  }
+}
+
+.btn-block {
+  .pos(f);
+  .bottom(0);
+  .w(100%);
+  .h(64px);
+  .bg-c(@blue);
+  .bg-c(rgba(41,189,224,.5));
+  button {
+    margin: 12px 5% 10px 5%;
+    .btn(40%,42px,20px,@white,@com-orange,1px,@com-orange,5px);
+  }
+}
+
+.bg-mask {
+  .pos(a);
+  .top(0);
+  .w(100%);
+  .h(100%);
+  .bg-c(@black);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: 10;
+}
+.pop-up {
+  .pos(a);
+  .top(160px);
+  .left(50%);
+  .ml(-140px);
+  .box(280px,180px,24px,@black,@white,10px);
+  z-index: 20;
+  overflow: hidden;
+  p {
+    .mt(40px);
+    padding: 0 30px;
+    .h(80px);
+    .color(#355978);
+    .fw(b);
+  }
+  button {
+    .btn(50%,60px,20px,#a6b8c5,@white,1px,#ebf2fc,0);
+  }
+  .cancel-btn {
+    border-right: 1px #fff;
+  }
+}
