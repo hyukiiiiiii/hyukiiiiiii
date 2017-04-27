@@ -1,0 +1,86 @@
+<div ng-controller="articleListCtrl as ctrl">
+    <div class="search-box">
+        <div>
+            <label>发布时间</label>
+            <p class="input-group">
+                <input type="text" datetime-picker="mediumDate" ng-model="ctrl.picker1.date" is-open="ctrl.picker1.open" enable-time="false" datepicker-options="ctrl.picker1.datepickerOptions" close-on-date-selection="false" datepicker-append-to-body="true" ng-click="ctrl.openCalendar($event,'picker1')"/>
+            </p>
+            <label>-</label>
+            <p class="input-group">
+                <input type="text" datetime-picker="mediumDate" ng-model="ctrl.picker2.date" is-open="ctrl.picker2.open" enable-time="false" datepicker-options="ctrl.picker2.datepickerOptions" close-on-date-selection="false" datepicker-append-to-body="true" ng-click="ctrl.openCalendar($event,'picker2')"/>
+            </p>
+            <!-- <label>Difference</label>
+            <p>{{ ctrl.dayRange }} (days)</p> -->
+        </div> 
+        <div>
+            <label>类型</label>
+            <select ng-model="sType" ng-options="y.name for (x,y) in aType">
+                <option value="">全部</option>
+            </select>
+        </div>
+        <div>
+            <label>状态</label>
+            <select ng-model="sStatus" ng-options="y.name for (x,y) in aStatus">
+                <option value="">全部</option>
+            </select>
+        </div>
+        <div class="search-btn-box">
+            <button type="button" ng-click="getInit()">清空</button>
+            <button type="button" ng-click="getArticle()">搜索</button>
+        </div>
+    </div>
+
+    <div class="article-list">
+        <div class="title">
+            <h4>article列表</h4>
+            <button type="button" ng-click="newArticle()">新增</button>
+        </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>名称</th>
+                <th>类型</th>
+                <th>发布时间</th>
+                <th>修改时间</th>
+                <th>发布者</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            <tr ng-repeat="x in articleArr">
+                <td>{{x.id}}</td>
+                <td>{{x.title}}</td>
+                <td>{{x.type | numToType}}</td>
+                <td>{{x.createAt | stringToDate}}</td>
+                <td>{{x.updateAt | stringToDate}}</td>
+                <td>{{x.author}}</td>
+                <td>{{x.status | numToStatus}}</td>
+                <td>
+                    <button type="button">{{x.status | statusSwitch}}</button>
+                    <button type="button">编辑</button>
+                    <button type="button">删除</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <div>
+            <span>每页显示</span>
+            <input type="text" ng-model="oSize" ng-click="getArticle()">
+            <span>条</span>
+        </div>
+        <div>
+            <button type="button" ng-click="firstPage()">首页</button>
+            <button type="button" ng-click="pageUp()"><</button>
+            <button type="button" ng-click="toPage($event,x)" ng-repeat="x in pageArr">{{x}}</button>
+            <button type="button" ng-click="pageDown()">></button>
+            <button type="button" ng-click="lastPage()">末页</button>
+        </div>
+        <div>
+            <span>去第</span>
+            <input type="" ng-model="aPage">
+            <span>页</span>
+            <button type="button" ng-click="turnTo()">确定</button>
+        </div>
+    </div>
+</div>
