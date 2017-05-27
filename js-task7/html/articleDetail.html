@@ -1,42 +1,70 @@
 <div ng-controller="articleDetailCtrl">
-    <p>新增Article</p>
+<form class="upload-form">
+    <h4 ng-hide="isEdit">新增Article</h4>
+    <h4 ng-show="isEdit">编辑Article</h4>
     <div>
-        <div>
-            <span>标题名称</span>
-            <input type="text" ng-model="newTitle">
+        <div class="upload-list">
+            <label>标题名称</label
+            ><input class="text-input" type="text" ng-model="atc.title">
         </div>
-        <div>
-            <span>类型</span><input type="text" ng-model="newType">
-            <!-- <select ng-repeat="x for x in articleType" ng-model="newType"></select> -->
+        <div class="upload-list">
+            <label><span>类</span><span>型</span></label
+            ><select ng-options="x | numToType for x in atcType" ng-model="atc.type">
+                <option value="">请选择</option>
+            </select>
+            <select ng-options="x | numToIndustry for x in atcIndustry" ng-show="atc.type==3" ng-model="atc.industry">
+                <option value="">请选择</option>
+            </select>
         </div>
-        <div>
-            <span>说明</span>
-            <!-- <input type="text" ng-model="newIllurstate"> -->
+        <div class="upload-list">
+            <label><span>说</span><span>明</span></label
+            ><div class="ueditor" config="config" ng-model="atc.content"></div>
         </div>
-        <div>
-            <span>跳转链接</span>
-            <input type="text" name="" ng-model="newLink">
+        <div class="upload-list">
+            <label>跳转链接</label
+            ><input class="text-input" type="text" ng-model="atc.url">
         </div>
-        <div>
-            <span>配图</span>
-            <input type="file" name="pic" accept="image/png,image/gif" />
-            <div>配图预览</div>
-            <table>
-                <tbody>
+        <div class="upload-list">
+            <div class="img-input-box">
+                <label><span>配</span><span>图</span></label>
+                <span class="img-span">选择文件</span>
+                <input type="file" onchange="angular.element(this).scope().chooseImg()" accept="image/png,image/gif,image/jpg">
+            </div>
+            <div ng-class="{'preview-load':atc.img}" class="img-preview-box">
+                <img ng-src="{{atc.img}}" ng-show="atc.img" alt="配图预览">
+                <img ng-show="!atc.img" alt="配图预览">
+            </div>
+            <table class="img-upload-box">
+                <thead>
                     <tr>
-                        <th>图片名</th>
-                        <th>文件大小</th>
-                        <th>进度</th>
-                        <th>操作</th>
-                        <th>操作</th>
+                        <th class="img-name">图片名</th>
+                        <th class="img-size">文件大小</th>
+                        <th class="img-progress">进度</th>
+                        <th class="img-action">操作</th\>
+                        <th class="img-action2">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-hide="img.file?false:true">
+                        <td class="img-name">{{img.name}}</td>
+                        <td class="img-size">{{img.size}}</td>
+                        <td class="img-progress"><progress value="{{img.progress}}" max="100"></td>
+                        <td class="img-action"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></td>
+                        <td class="img-action2">
+                            <button type="button" class="btn btn-success btn-xs" ng-click="imgUpload()"><i class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></i>上传</button>
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="imgDelete()"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i>删除</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div>
-            <button type="button" ng-click="msgSubmit()">立即上线</button>
-            <button type="button">存为草稿</button>
-            <button type="button">取消</button>
+        <div class="upload-list">
+            <div class="btn-box">
+                <button type="button" class="btn btn-success submit-btn" ng-disabled="getDisabled()" ng-click="uploadAtc(2)">立即上线</button>
+                <button type="button" class="btn btn-success submit-btn" ng-disabled="getDisabled()" ng-click="uploadAtc(1)">存为草稿</button>
+                <button type="button" class="btn btn-default cancel-btn" ng-click="uploadAtc('cancel')">取消</button>
+            </div>
         </div>
     </div>
+</form>
 </div>

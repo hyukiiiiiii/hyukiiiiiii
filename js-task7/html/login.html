@@ -1,8 +1,7 @@
-
-	<form ng-controller="formCtrl" invalidate>
-		<h4>登录</h4>
-		<div>用户名<input type="text" name="user" ng-model="user.name"></div>
-		<div>密码<input type="password" name="pwd" ng-model="user.pwd"></div>
-		<label name="keep-login"><input type="checkbox" name="keep-login" value="">保持登录</label>
-		<button type="button" ng-click="submit()">登录</button>
+<div class="login-bg">
+	<form class="login-form" ng-controller="formCtrl" invalidate>
+		<input class="login-msg" type="text" ng-model="user.name">
+		<input class="login-msg" type="password" ng-model="user.pwd">
+		<button class="login-btn" type="button" ng-click="login()">登录</button>
 	</form>
+</div>

@@ -1,0 +1,118 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/*******************************/
+.upload-form {
+    margin: 30px;
+    .pb(80px);
+    .min-w(1000px);
+    .border-r(1px,@black70,4px);
+    h4 {
+        margin: 0;
+        padding: 10px;
+        .fw(b);
+        .border-bottom(1px,@black70);
+    }
+}
+.upload-list {
+    .mt(14px);
+    .ml(100px);
+    &:nth-child(3) {
+        .pos(r);
+        .h(180px);
+    }
+    label {
+        .mb(0);
+        .lh(36px);
+    }
+    label span:last-child {.ml(32px);}
+    .text-input {
+        .ml(20px);
+        .h(36px);
+        .lh(36px);
+        .border-box(680px,36px,14px,@black,@white,1px,@black70,4px);
+        .ti(12px);
+    }
+    .ueditor {
+        .pos(a);
+        .top(0);
+        .left(84px);
+        .w(680px);
+        .h(120px);
+    }
+    select {
+        .ml(20px);
+        .border-box(200px,36px,14px,@black,@white,1px,@black70,4px);
+        .ti(12px);
+    }
+    .img-input-box {
+        .dp(ib);
+        .pos(r);
+        .w(300px);
+        .h(36px);
+        .img-span {
+            .pos(a);
+            .top(0);
+            .left(84px);
+            .border-box(80px,36px,14px,@white,@blue,1px,@blue,4px);
+            .lh(36px);
+            .ti(12px);
+        }
+        input {
+            .pos(a);
+            .top(0);
+            .left(84px);
+            .w(80px);
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+    .img-preview-box {
+        .dp(f);
+        justify-content: center;
+        align-items: center;
+        .ml(84px);
+        .w(70px);
+        img {
+            .max-w(100%);
+            max-height: 100%;
+        }
+    }
+    .preview-load {
+        .w(150px);
+        .h(200px);
+        .border-r(1px,@black70,0);
+        .bg-c(@black70);
+    }
+    .img-upload-box {
+        .ml(84px);
+        thead {.border-bottom(1px,@black70);}
+        th,
+        td {.ta(c);}
+        .img-name {.w(120px);}
+        .img-size {.w(120px);}
+        .img-progress {.w(40px);}
+        .img-action {.w(80px);}
+        .img-action2 {.w(120px);}
+        progress {
+            .fl(l);
+            .w(40px);
+            .h(20px);
+            .color(@blue);
+            .bg-c(@black70);
+        }
+        progress::-moz-progress-bar { .bg-c(@black70); }
+        progress::-webkit-progress-bar { .bg-c(@black70); }
+        progress::-webkit-progress-value  { .bg-c(@blue); }
+        button i {
+            .dp(ib);
+            .mr(4px);
+        }
+    }
+    .btn-box {
+        .mt(30px);
+        .ml(84px);
+        .cancel-btn {
+            .ml(420px);
+        }
+    }
+}

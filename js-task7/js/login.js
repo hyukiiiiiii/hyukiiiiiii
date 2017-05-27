@@ -1,26 +1,23 @@
 angular.module("myApp")
-.controller("formCtrl",function($scope,$http,$state) {
-    $scope.user = {name:"admin",pwd:"123456"};
-    $scope.submit = function() {
-        //$scope.formCheck = false;
-        //$scope.nameCheck = false;
-        //$scope.pwdCheck = false;
-        $scope.acount = angular.copy($scope.user);
-        console.log($scope.acount);
+.controller("formCtrl",function($scope,$http,$state,ipCookie) {
+    $scope.user = ipCookie("managementAcount");//从cookies获取账号和密码
+    $scope.login = function() {
+        $scope.acount = angular.copy($scope.user);//获取账号和密码
+        console.log("acount: ",$scope.acount);
         $http({
             method: "post",
-            url: "/carrots-admin-ajax/a/login/?name="+$scope.acount.name+"&pwd="+$scope.acount.pwd
+            params: $scope.acount,
+            url: "/carrots-admin-ajax/a/login/"
         }).then(function successCallback(response) {
-            $scope.usermsg = response.data.message;
-            console.log(response.data);
-            if($scope.usermsg=="success"){
-                console.log($scope.usermsg);
-                $state.go("management.dashboard");
+            $scope.data = response.data;//登录结果
+            console.log("login => http.post => response.data => ",response.data);
+            if($scope.data.message=="success"){
+                ipCookie("managementAcount",$scope.acount,{expires: 10});//账号和密码存为cookies
+                $scope.cookies = ipCookie("managementAcount");
+                $state.go("management");
             }else {
-                alert($scope.usermsg);
-                console.log($scope.usermsg);
-                //$scope.formCheck = true;
-                //$scope.nameCheck = true;
+                alert($scope.data.message);
+                console.log($scope.data.message);
             }
         },function errorCallback(response){
             console.log(response);

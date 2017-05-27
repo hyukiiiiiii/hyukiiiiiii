@@ -4,6 +4,8 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;}*/
   html,body,input{font-family: "Microsoft YaHei", sans-serif;}
+  html {.fz(625%)}
+  body {.fz(16px)}
   ul,ol{list-style:none;}
   img{border:none;}
   input,select,textarea{outline:none; border:none; background:none;}
@@ -81,17 +83,8 @@
 .border-left(@px:1px,@color) {border-left: @px solid @color;}
 .border-right(@px:1px,@color) {border-right: @px solid @color;}
 .border-r(@px:1px,@color,@r:1px) {border: @px solid @color;border-radius: @r;}
+.box-r(@r:4px) {border-radius: @r;}
 //border,background
-
-.btn(@w,@h,@fz,@color,@bg-c,@b,@b-c,@r) {
-  .w(@w);
-  .h(@h);
-  .fz(@fz);
-  .color(@color;);
-  .bg-c(@bg-c);
-  .border(@b,@b-c);
-  .border-r(@r);
-}//button
 
 .box(@w,@h,@fz,@color,@bg-c,@r) {
   .w(@w);
@@ -99,8 +92,17 @@
   .fz(@fz);
   .color(@color;);
   .bg-c(@bg-c);
-  .border-r(@r);
+  .box-r(@r);
   }//radius-box
+
+.border-box(@w,@h,@fz,@color,@bg-c,@b,@border-c,@r) {
+  .w(@w);
+  .h(@h);
+  .fz(@fz);
+  .color(@color;);
+  .bg-c(@bg-c);
+  .border-r(@b,@border-c,@r);
+  }//radius-box//button
 
 .tri(@t,@t-c:transparent,@b,@b-c:transparent,@l,@l-c:transparent,@r,@r-c:transparent) {
   .border-top(@t,@t-c);

@@ -1,86 +1,106 @@
 <div ng-controller="articleListCtrl as ctrl">
     <div class="search-box">
-        <div>
+        <div class="date-box">
             <label>发布时间</label>
             <p class="input-group">
-                <input type="text" datetime-picker="mediumDate" ng-model="ctrl.picker1.date" is-open="ctrl.picker1.open" enable-time="false" datepicker-options="ctrl.picker1.datepickerOptions" close-on-date-selection="false" datepicker-append-to-body="true" ng-click="ctrl.openCalendar($event,'picker1')"/>
+                <input type="text" datetime-picker="yyyy-MM-dd" datetime-picker="mediumDate" ng-model="ctrl.picker1.date" is-open="ctrl.picker1.open" enable-time="false" datepicker-options="ctrl.picker1.datepickerOptions" close-on-date-selection="false" datepicker-append-to-body="true" ng-click="ctrl.openCalendar($event,'picker1')"/>
             </p>
-            <label>-</label>
+        </div>
+        <div class="date-box">
+            <label>——</label>
             <p class="input-group">
-                <input type="text" datetime-picker="mediumDate" ng-model="ctrl.picker2.date" is-open="ctrl.picker2.open" enable-time="false" datepicker-options="ctrl.picker2.datepickerOptions" close-on-date-selection="false" datepicker-append-to-body="true" ng-click="ctrl.openCalendar($event,'picker2')"/>
-            </p>
-            <!-- <label>Difference</label>
-            <p>{{ ctrl.dayRange }} (days)</p> -->
-        </div> 
-        <div>
-            <label>类型</label>
-            <select ng-model="sType" ng-options="y.name for (x,y) in aType">
+                <input type="text" datetime-picker="yyyy-MM-dd" datetime-picker="mediumDate" ng-model="ctrl.picker2.date" is-open="ctrl.picker2.open" enable-time="false" datepicker-options="ctrl.picker2.datepickerOptions" close-on-date-selection="false" datepicker-append-to-body="true" ng-click="ctrl.openCalendar($event,'picker2')"/>
+            </p><!-- <label>Difference</label><p>{{ ctrl.dayRange }} (days)</p> -->
+        </div>
+        <div class="select-group">
+            <label><span>类</span><span>型</span></label>
+            <select ng-model="local.type" ng-options="x | numToType for x in atcType">
                 <option value="">全部</option>
             </select>
         </div>
-        <div>
-            <label>状态</label>
-            <select ng-model="sStatus" ng-options="y.name for (x,y) in aStatus">
+        <div class="select-group">
+            <label><span>状</span><span>态</span></label>
+            <select ng-model="local.status" ng-options="x | numToStatus for x in atcStatus">
                 <option value="">全部</option>
             </select>
         </div>
         <div class="search-btn-box">
-            <button type="button" ng-click="getInit()">清空</button>
-            <button type="button" ng-click="getArticle()">搜索</button>
+            <button type="button" class="btn btn-danger" ng-click="getData('init')">清空</button>
+            <button type="button" class="btn btn-success" ng-click="getData('search')">搜索</button>
         </div>
     </div>
 
-    <div class="article-list">
+    <div class="article-box">
         <div class="title">
-            <h4>article列表</h4>
-            <button type="button" ng-click="newArticle()">新增</button>
+            <b>Article列表</b>
+            <button type="button" class="btn btn-success btn-xs" ng-click="setAtc('new')">+新增</button>
         </div>
+        <div class="article-list">
         <table>
-            <tr>
-                <th>ID</th>
-                <th>名称</th>
-                <th>类型</th>
-                <th>发布时间</th>
-                <th>修改时间</th>
-                <th>发布者</th>
-                <th>状态</th>
-                <th>操作</th>
+            <tr class="article-head">
+                <th class="atc-id">ID</th>
+                <th class="atc-title">名称</th>
+                <th class="atc-type">类型</th>
+                <th class="atc-createAt">发布时间</th>
+                <th class="atc-updateAt">修改时间</th>
+                <th class="atc-author">发布者</th>
+                <th class="atc-status">状态</th>
+                <th class="atc-button">操作</th>
             </tr>
-            <tr ng-repeat="x in articleArr">
-                <td>{{x.id}}</td>
-                <td>{{x.title}}</td>
-                <td>{{x.type | numToType}}</td>
-                <td>{{x.createAt | stringToDate}}</td>
-                <td>{{x.updateAt | stringToDate}}</td>
-                <td>{{x.author}}</td>
-                <td>{{x.status | numToStatus}}</td>
-                <td>
-                    <button type="button">{{x.status | statusSwitch}}</button>
-                    <button type="button">编辑</button>
-                    <button type="button">删除</button>
+            <tr class="article-cnt" ng-repeat="x in data.articleList">
+                <td class="atc-id">{{x.id}}</td>
+                <td class="atc-title">{{x.title}}</td>
+                <td class="atc-type">{{x.type | numToType}}</td>
+                <td class="atc-createAt">{{x.createAt | stringToDate}}</td>
+                <td class="atc-updateAt">{{x.updateAt | stringToDate}}</td>
+                <td class="atc-author">{{x.author}}</td>
+                <td class="atc-status">{{x.status | numToStatus}}</td>
+                <td class="atc-button">
+                    <a href="" ng-click="setAtc('status',x.id,x.status)">{{x.status | statusToAct}}</a>
+                    <a href="" ng-click="setAtc('edit',x.id)">编辑</a>
+                    <a href="" ng-click="setAtc('delete',x.id)">删除</a>
                 </td>
             </tr>
         </table>
+        </div>
     </div>
 
-    <div>
-        <div>
+    <div class="page-box">
+        <div class="page-size">
             <span>每页显示</span>
-            <input type="text" ng-model="oSize" ng-click="getArticle()">
+            <input type="text" ng-model="local.size">
             <span>条</span>
         </div>
-        <div>
-            <button type="button" ng-click="firstPage()">首页</button>
-            <button type="button" ng-click="pageUp()"><</button>
-            <button type="button" ng-click="toPage($event,x)" ng-repeat="x in pageArr">{{x}}</button>
-            <button type="button" ng-click="pageDown()">></button>
-            <button type="button" ng-click="lastPage()">末页</button>
+        <div class="page-arr">
+            <button class="p-btn" type="button" ng-click="getData(1)">首页</button>
+            <button class="t-btn" type="button" ng-hide="local.page==1" ng-click="getData(local.page-1)"><</button>
+            <button class="p-arr-btn" ng-class="{'p-btn-on': local.page==x}" type="button" ng-click="getData(x)" ng-repeat="x in page.array">{{x}}</button>
+            <button class="t-btn" type="button" ng-hide="local.page==page.length" ng-click="getData(local.page+1)">></button>
+            <button class="p-btn" type="button" ng-click="getData(page.length)">末页</button>
         </div>
-        <div>
+        <div class="page-turnto">
             <span>去第</span>
-            <input type="" ng-model="aPage">
+            <input type="text" ng-model="page.to">
             <span>页</span>
-            <button type="button" ng-click="turnTo()">确定</button>
+            <button class="p-btn" type="button" ng-click="getData(page.to)">确定</button>
+        </div>
+    </div>
+    <div class="pop-mask" ng-show="pop.open"></div>
+    <div class="pop-up" ng-show="pop.open">
+        <span class="pop-head" ng-show="pop.actiontip">操作提示</span>
+        <span class="pop-head" ng-show="!pop.actiontip">提示</span>
+        <button type="button" class="pop-close" ng-click="popConfirm('cancel')" ng-show="pop.actiontip">关闭</button>
+        <p class="tip">{{pop.tip}}</p>
+        <p class="actiontip">{{pop.actiontip}}</p>
+        <p class="dangertip">{{pop.dangertip}}</p>
+        <div class="pop-button-box">
+            <button type="button" class="btn btn-primary" ng-click="popConfirm('delete')" ng-show="pop.act=='delete'">确定</button>
+            <!-- delete -->
+            <button type="button" class="btn btn-warning" ng-click="popConfirm('cancel')" ng-show="pop.act">取消</button>
+            <button type="button" class="btn btn-primary" ng-click="popConfirm('sure')" ng-show="!pop.act">确定</button>
+            <!-- confirm -->
+            <button type="button" class="btn btn-primary" ng-click="popConfirm('switch')" ng-show="pop.act=='switch'">确定</button>
+            <!-- switch -->
         </div>
     </div>
 </div>

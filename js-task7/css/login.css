@@ -1,2 +1,1 @@
-h4 {color:red;}
-div {background-color: red;}
+body,html{height:100%}.login-bg{position:fixed;width:100%;height:100%;background-color:#19212f}.login-form{position:absolute;left:50%;top:1.6rem;margin-left:-1.7rem;padding:.6rem 0 .4rem 0;width:3.4rem;height:2.6rem;font-size:16px;color:#000;background-color:#fff;border-radius:.04rem}.login-form .login-msg{margin:.08rem .1rem;width:3.2rem;height:.42rem;font-size:16px;color:#fc0;background-color:#fff;border:1px solid #b3b3b3;border-radius:.06rem;text-indent:10px}.login-form .login-btn{margin:.08rem .1rem;width:3.2rem;height:.42rem;font-size:16px;color:#fff;background-color:#487dc0;border:1px solid #487dc0;border-radius:.06rem}

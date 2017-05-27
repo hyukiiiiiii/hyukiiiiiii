@@ -1,22 +1,69 @@
+<div ng-controller="managementCtrl">
+    <div class="mng-nav">
+        <p class="mng-h">萝卜多后台管理系统</p>
+        <ul>
+            <li>
+                <div>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <span>信息管理</span>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+            </li>
+            <li>
+                <div ng-click="atcListToggle()">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <span>Article管理</span>
+                    <i class="fa fa-angle-left" aria-hidden="true" ng-show="!isShow"></i>
+                    <i class="fa fa-angle-down" aria-hidden="true" ng-show="isShow"></i>
+                </div>
+                <a class="mng-a-atclist" ng-show="isShow" ng-click="toAtcList()">Article列表</a>
+            </li>
+            <li>
+                <div>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <span>人才管理</span>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <span>推荐管理</span>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <span>后台管理</span>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+            </li>
+                <li>
+                <div>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <span>用户管理</span>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <span>内容管理</span>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-<div>
-    <h4>萝卜多后台管理系统</h4>
-    <ul>
-        <li><div>信息管理</div></li>
-        <li><div>Article管理</div><a ui-sref="management.articleList">article列表</a></li>
-        <li><div>人才管理</div></li>
-        <li><div>推荐管理</div></li>
-        <li><div>后台管理</div></li>
-        <li><div>用户管理</div></li>
-        <li><div>内容管理</div></li>
-    </ul>
+    <div class="login-msg-box">
+        <span class="login-name" ng-model="manager.name">{{manager.name}}</span
+        ><span class="line"></span
+        ><span class="login-name" ng-model="role.name">{{role.name}}</span
+        ><span class="line"></span
+        ><button type="button" ng-click="logOut()"><i class="fa fa-power-off" aria-hidden="true"></i></button>
+    </div>
+
 </div>
 
-
-<div>
-    <span>name</span>
-    <span></span>
-    <button type="button" >注销</button>
-</div>
-
-<div ui-view="content"></div>
+<div class="content-box" ui-view="content"></div>

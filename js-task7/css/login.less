@@ -1,0 +1,30 @@
+@import "../base/base.less";
+@import "../base/color-img.less";
+/*******************************/
+html,
+body {
+    .h(100%);
+}
+.login-bg {
+	.pos(f);
+	.w(100%);
+	.h(100%);
+	.bg-c(@darkblue);
+}
+.login-form {
+	.pos(a);
+	.left(50%);
+	.top(1.6rem);
+	.ml(-1.7rem);
+	padding: .6rem 0 .4rem 0;
+	.box(3.4rem,2.6rem,16px,@black,@white,.04rem);
+	.login-msg {
+		margin: .08rem .1rem;
+		.border-box(3.2rem,.42rem,16px,@orange,@white,1px,@black70,.06rem);
+		.ti(10px);
+	}
+	.login-btn {
+		margin: .08rem .1rem;
+		.border-box(3.2rem,.42rem,16px,@white,@blue,1px,@blue,.06rem);
+	}
+}
