@@ -31,12 +31,20 @@ a{text-decoration:none}
     border:.05rem solid lightblue;
     outline: none;
 }
+.abc {
+    width:20px;
+    height:20px;
+    background-color: black;
+}
 .line {
     position: absolute;
     top: 0;
     left: 0;
     border-radius: .05rem;
     background-color: yellow;
+}
+.hide {
+    display: none;
 }
 
 .click-on {
