@@ -163,7 +163,6 @@ $(document).ready(function(){
         b = null;
     }
     function smach() {
-        alert("123");
         $(".top"+(a.top-1)+":eq("+(a.left-1)+") button").hide();
         $(".top"+(b.top-1)+":eq("+(b.left-1)+") button").hide();
         map[a.top][a.left] = null;
