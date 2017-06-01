@@ -18,7 +18,6 @@ a{text-decoration:none}
     position: relative;
     width: 800px;
     height: 600px;
-    border: 1px solid orange;
     border-radius: 15px;
     background-color: lightblue;
 }
